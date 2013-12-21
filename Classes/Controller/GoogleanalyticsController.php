@@ -227,12 +227,11 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 	protected function _getPageUrl($pageUrlConfig) {
 		
 		// If a configuration array has been passed ...
-		if (is_array($pageUrlConfig)) {
-			$typoScriptService			= new \TYPO3\CMS\Extbase\Service\TypoScriptService();
-			$pageUrlConfig				= $typoScriptService->convertTypoScriptArrayToPlainArray($this->settings);
+		if (is_array($pageUrlConfig) && array_key_exists('_typoScriptNodeValue', $pageUrlConfig)) {
+			
 			/* @var $cObj \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer */			
 			$cObj						= $GLOBALS['TSFE']->cObj;
-			$pageUrl					= $cObj->cObjGetSingle($pageUrlConfig['pageUrl'], $pageUrlConfig['pageUrl.']);
+			$pageUrl					= $cObj->cObjGetSingle($pageUrlConfig['_typoScriptNodeValue'], $pageUrlConfig);
 			return $pageUrl;
 			
 		// ... else if a literal page title has been passed ... 

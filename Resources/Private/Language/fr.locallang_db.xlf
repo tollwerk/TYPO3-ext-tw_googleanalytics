@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2013-02-09T14:05:51Z" product-name="tw_googleanalytics">
+		<header/>
+		<body>
+			<trans-unit id="features" xml:space="preserve" approved="yes">
+				<source>Features</source>
+				<target>Caractéristiques</target>
+			</trans-unit>
+			<trans-unit id="common" xml:space="preserve" approved="yes">
+				<source>Common settings</source>
+				<target>Paramètres communs</target>
+			</trans-unit>
+			<trans-unit id="crossdomain" xml:space="preserve" approved="yes">
+				<source>Cross-domain tracking</source>
+				<target>Suivi multi-domaines</target>
+			</trans-unit>
+			<trans-unit id="external" xml:space="preserve" approved="yes">
+				<source>E-Mail &amp; external link tracking</source>
+				<target>Suivi des liens externes et courriels</target>
+			</trans-unit>
+			<trans-unit id="download" xml:space="preserve" approved="yes">
+				<source>Download tracking</source>
+				<target>Suivi des liens sur fichiers</target>
+			</trans-unit>
+			<trans-unit id="direct" xml:space="preserve" approved="yes">
+				<source>Direct traffic</source>
+				<target>Trafic direct</target>
+			</trans-unit>
+			<trans-unit id="searchengines" xml:space="preserve" approved="yes">
+				<source>Search engines</source>
+				<target>Moteurs de recherche</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_twgoogleanalytics_no_tracking" xml:space="preserve" approved="yes">
+				<source>Google Analytics tracking</source>
+				<target>Statistiques Google Analytics</target>
+			</trans-unit>
+			<trans-unit id="file" xml:space="preserve" approved="yes">
+				<source>Files &amp; directories</source>
+				<target>Files &amp; directories</target>
+			</trans-unit>
+			<trans-unit id="file.templateRootPath" xml:space="preserve" approved="yes">
+				<source>Path to template root (FE):You can alter this in case you want to customize the tracking code output</source>
+				<target>Path to template root (FE):You can alter this in case you want to customize the tracking code output</target>
+			</trans-unit>
+			<trans-unit id="file.partialRootPath" xml:space="preserve" approved="yes">
+				<source>Path to template partials (FE):You can alter this, though the standard plugin doesn't use partials ...</source>
+				<target>Path to template partials (FE):You can alter this, though the standard plugin doesn't use partials ...</target>
+			</trans-unit>
+			<trans-unit id="file.layoutRootPath" xml:space="preserve" approved="yes">
+				<source>Path to template layouts (FE):You can alter this, though the standard plugin doesn't use layouts ...</source>
+				<target>Path to template layouts (FE):You can alter this, though the standard plugin doesn't use layouts ...</target>
+			</trans-unit>
+			<trans-unit id="common.enable" xml:space="preserve" approved="yes">
+				<source>Enable Google Analytics Tracking:This has to be enabled for tracking your website with Google / Universal Analytics</source>
+				<target>Enable Google Analytics Tracking:This has to be enabled for tracking your website with Google / Universal Analytics</target>
+			</trans-unit>
+			<trans-unit id="common.wpid" xml:space="preserve" approved="yes">
+				<source>Google Analytics &quot;Web Property-ID&quot;:The &quot;Web Property-ID&quot; is issued by Google Analytics and uniquely identifies your website. It should have the format UA-XXXXX-X and can be found in the &quot;Admin &gt; Account Administration&quot; section of your Google Analytics interface</source>
+				<target>Google Analytics &quot;Web Property-ID&quot;:The &quot;Web Property-ID&quot; is issued by Google Analytics and uniquely identifies your website. It should have the format UA-XXXXX-X and can be found in the &quot;Admin &gt; Account Administration&quot; section of your Google Analytics interface</target>
+			</trans-unit>
+			<trans-unit id="common.debug" xml:space="preserve" approved="yes">
+				<source>Debug mode:Enable the debug mode in order to get detailed output to your javascript console (deactivate for production use)</source>
+				<target>Debug mode:Enable the debug mode in order to get detailed output to your javascript console (deactivate for production use)</target>
+			</trans-unit>
+			<trans-unit id="features.anonymizeIP" xml:space="preserve" approved="yes">
+				<source>Anonymize IP address:Activate this feature for anonymizing your visiors' IP addresses (e.g. required by german law)</source>
+				<target>Anonymize IP address:Activate this feature for anonymizing your visiors' IP addresses (e.g. required by german law)</target>
+			</trans-unit>
+			<trans-unit id="features.track.title" xml:space="preserve" approved="yes">
+				<source>Track page title:You might want to disable this feature if you have no specified or very long and cryptic page titles</source>
+				<target>Track page title:You might want to disable this feature if you have no specified or very long and cryptic page titles</target>
+			</trans-unit>
+			<trans-unit id="features.track.client" xml:space="preserve" approved="yes">
+				<source>Track client info:Disable this if you do not want to track your visitors' browser types / versions</source>
+				<target>Track client info:Disable this if you do not want to track your visitors' browser types / versions</target>
+			</trans-unit>
+			<trans-unit id="features.track.flash" xml:space="preserve" approved="yes">
+				<source>Track flash version:Disable this if you do not want to track your visitors' flash plugin types / versions</source>
+				<target>Track flash version:Disable this if you do not want to track your visitors' flash plugin types / versions</target>
+			</trans-unit>
+			<trans-unit id="crossdomain.domain.sub" xml:space="preserve" approved="yes">
+				<source>Tracking across sub-domains:If you want to enable tracking across multiple sub-domains, set this to &quot;Manual&quot; and enter the main domain name for all the sub-domains you want to track (see next setting &quot;domain.main&quot;). Set this to &quot;None&quot; in order to ensure that the cookies in a given domain are not accessible by any sub-domains</source>
+				<target>Tracking across sub-domains:If you want to enable tracking across multiple sub-domains, set this to &quot;Manual&quot; and enter the main domain name for all the sub-domains you want to track (see next setting &quot;domain.main&quot;). Set this to &quot;None&quot; in order to ensure that the cookies in a given domain are not accessible by any sub-domains</target>
+			</trans-unit>
+			<trans-unit id="crossdomain.domain.main" xml:space="preserve" approved="yes">
+				<source>Main domain name:If you've chosen &quot;Manual&quot; domain name entry above (setting &quot;domain.sub&quot;), please enter your main domain name here (it might be preceded by a dot in order to assure that *only* sub-domains will be tracked and the main domain itself be ommited)</source>
+				<target>Main domain name:If you've chosen &quot;Manual&quot; domain name entry above (setting &quot;domain.sub&quot;), please enter your main domain name here (it might be preceded by a dot in order to assure that *only* sub-domains will be tracked and the main domain itself be ommited)</target>
+			</trans-unit>
+			<trans-unit id="crossdomain.domain.cross" xml:space="preserve" approved="yes">
+				<source>Tracking across multiple domains:If you want to enable tracking across multiple (top level) domains, enter the domain names here (separated by a comma)</source>
+				<target>Tracking across multiple domains:If you want to enable tracking across multiple (top level) domains, enter the domain names here (separated by a comma)</target>
+			</trans-unit>
+			<trans-unit id="external.external.track" xml:space="preserve" approved="yes">
+				<source>Track external URLs:Choose whether and how traversals to external website URLs should be tracked</source>
+				<target>Track external URLs:Choose whether and how traversals to external website URLs should be tracked</target>
+			</trans-unit>
+			<trans-unit id="external.external.prefix" xml:space="preserve" approved="yes">
+				<source>External URL prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for external URLs</source>
+				<target>External URL prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for external URLs</target>
+			</trans-unit>
+			<trans-unit id="external.external.restrict" xml:space="preserve" approved="yes">
+				<source>Restrict to domains:Enter a comma separated list of domains if you would like to restrict tracking to those ones</source>
+				<target>Restrict to domains:Enter a comma separated list of domains if you would like to restrict tracking to those ones</target>
+			</trans-unit>
+			<trans-unit id="external.email.track" xml:space="preserve" approved="yes">
+				<source>Track e-mail links:Choose whether and how e-mail links should be tracked</source>
+				<target>Track e-mail links:Choose whether and how e-mail links should be tracked</target>
+			</trans-unit>
+			<trans-unit id="external.email.prefix" xml:space="preserve" approved="yes">
+				<source>E-mail link prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for e-mail links</source>
+				<target>E-mail link prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for e-mail links</target>
+			</trans-unit>
+			<trans-unit id="external.email.restrict" xml:space="preserve" approved="yes">
+				<source>Restrict to e-mail addresses:Enter a comma separated list of e-mail addresses if you would like to restrict tracking to those ones</source>
+				<target>Restrict to e-mail addresses:Enter a comma separated list of e-mail addresses if you would like to restrict tracking to those ones</target>
+			</trans-unit>
+			<trans-unit id="download.download.track" xml:space="preserve" approved="yes">
+				<source>Track downloads:Choose whether and how file downloads should be tracked</source>
+				<target>Track downloads:Choose whether and how file downloads should be tracked</target>
+			</trans-unit>
+			<trans-unit id="download.download.prefix" xml:space="preserve" approved="yes">
+				<source>Download link prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for download links</source>
+				<target>Download link prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for download links</target>
+			</trans-unit>
+			<trans-unit id="download.download.template" xml:space="preserve" approved="yes">
+				<source>Download link template:Enter the tracking template string used for should be used for download links (see manual for details)</source>
+				<target>Download link template:Enter the tracking template string used for should be used for download links (see manual for details)</target>
+			</trans-unit>
+			<trans-unit id="download.download.list" xml:space="preserve" approved="yes">
+				<source>Download folders &amp; extensions:Enter the folders and file extensions that should be tracked. You may provide a comma separated list of directory-extensions-combinations like this: /path/to/folder=pdf doc zip, /path/to/another/folder=zip rar exe</source>
+				<target>Download folders &amp; extensions:Enter the folders and file extensions that should be tracked. You may provide a comma separated list of directory-extensions-combinations like this: /path/to/folder=pdf doc zip, /path/to/another/folder=zip rar exe</target>
+			</trans-unit>
+			<trans-unit id="direct.direct.keywords" xml:space="preserve" approved="yes">
+				<source>Direct traffic keywords:Enter a comma separated list of keywords which – if used as search terms by your visitors - should be registered as direct traffic (instead of organic / search engine traffic). It is common to enter one's domain here ...</source>
+				<target>Direct traffic keywords:Enter a comma separated list of keywords which – if used as search terms by your visitors - should be registered as direct traffic (instead of organic / search engine traffic). It is common to enter one's domain here ...</target>
+			</trans-unit>
+			<trans-unit id="direct.direct.referrers" xml:space="preserve" approved="yes">
+				<source>Direct traffic referrer:Enter a comma separated list of domains which should be treated as direct traffic sources (instead of external referrers). You could e.g. enter secondary domains you use</source>
+				<target>Direct traffic referrer:Enter a comma separated list of domains which should be treated as direct traffic sources (instead of external referrers). You could e.g. enter secondary domains you use</target>
+			</trans-unit>
+			<trans-unit id="searchengines.searchengines" xml:space="preserve" approved="yes">
+				<source>Search engine traffic sources:Enter a comma separated list of search engine / keyword name definitions that should be considered as search engine traffic sources (e.g. &quot;MySpecialSearchEngine=query, AnotherSE=search&quot;). If you want a search engine to be prepended to the list of known traffic sources, append an exclamation mark to the definition (e.g. &quot;MostImportantSearchEngine=q!&quot;)</source>
+				<target>Search engine traffic sources:Enter a comma separated list of search engine / keyword name definitions that should be considered as search engine traffic sources (e.g. &quot;MySpecialSearchEngine=query, AnotherSE=search&quot;). If you want a search engine to be prepended to the list of known traffic sources, append an exclamation mark to the definition (e.g. &quot;MostImportantSearchEngine=q!&quot;)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,73 @@
+# customsubcategory=common=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:common
+# customsubcategory=crossdomain=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:crossdomain
+# customsubcategory=features=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features
+# customsubcategory=external=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:external
+# customsubcategory=download=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:download
+# customsubcategory=direct=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:direct
+# customsubcategory=searchengines=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:searchengines
+# customsubcategory=file=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:file
+
+plugin.tx_twgoogleanalytics {
+	view {
+		# cat=plugin.tx_twgoogleanalytics/file; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:file.templateRootPath
+		templateRootPath = EXT:tw_googleanalytics/Resources/Private/Templates/
+		# cat=plugin.tx_twgoogleanalytics/file; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:file.partialRootPath
+		partialRootPath = EXT:tw_googleanalytics/Resources/Private/Partials/
+		# cat=plugin.tx_twgoogleanalytics/file; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:file.layoutRootPath
+		layoutRootPath = EXT:tw_googleanalytics/Resources/Private/Layouts/
+	}
+	settings {
+		# cat=plugin.tx_twgoogleanalytics/common/a; type=options[Off=0,Google Analytics (ga.js)=1,Universal Analytics (analytics.js)=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:common.enable
+		enable = 0
+		# cat=plugin.tx_twgoogleanalytics/common/c; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:common.wpid
+		wpid = UA-21447578-2
+		# cat=plugin.tx_twgoogleanalytics/common/c; type=options[Off=0,On=1,Debug only=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:common.debug
+		debug = 0
+
+		# cat=plugin.tx_twgoogleanalytics/features/a; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.anonymizeIP
+		anonymizeIP = 1
+		# cat=plugin.tx_twgoogleanalytics/features/b; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.title
+		track.title = 1
+		# cat=plugin.tx_twgoogleanalytics/features/c; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.client
+		track.client = 1
+		# cat=plugin.tx_twgoogleanalytics/features/d; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.flash
+		track.flash = 1
+
+		# cat=plugin.tx_twgoogleanalytics/crossdomain/a; type=options[None=0,Auto=1,Manual=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:crossdomain.domain.sub
+		domain.sub = 1
+		# cat=plugin.tx_twgoogleanalytics/crossdomain/b; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:crossdomain.domain.main
+		domain.main =
+		# cat=plugin.tx_twgoogleanalytics/crossdomain/c; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:crossdomain.domain.cross
+		domain.cross =
+
+		# cat=plugin.tx_twgoogleanalytics/external/a; type=options[Off=0,As pageViews=1,As events=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:external.external.track
+		external.track = 0
+		# cat=plugin.tx_twgoogleanalytics/external/b; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:external.external.prefix
+		external.prefix = External
+		# cat=plugin.tx_twgoogleanalytics/external/c; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:external.external.restrict
+		external.restrict =
+		# cat=plugin.tx_twgoogleanalytics/external/d; type=options[Off=0,As pageViews=1,As events=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:external.email.track
+		email.track = 0
+		# cat=plugin.tx_twgoogleanalytics/external/e; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:external.email.prefix
+		email.prefix = Email
+		# cat=plugin.tx_twgoogleanalytics/external/f; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:external.email.restrict
+		email.restrict =
+
+		# cat=plugin.tx_twgoogleanalytics/download/a; type=options[Off=0,As pageViews=1,As events=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:download.download.track
+		download.track = 0
+		# cat=plugin.tx_twgoogleanalytics/download/b; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:download.download.prefix
+		download.prefix = Download
+		# cat=plugin.tx_twgoogleanalytics/download/c; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:download.download.template
+		download.template = {pathname}
+		# cat=plugin.tx_twgoogleanalytics/download/d; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:download.download.list
+		download.list = /=doc docx pdf xls ppt zip gz bz2 rar txt vsd vxd js css exe wma mov avi wmv mp3 mp4
+
+		# cat=plugin.tx_twgoogleanalytics/direct/a; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:direct.direct.keywords
+		direct.keywords =
+		# cat=plugin.tx_twgoogleanalytics/direct/a; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:direct.direct.referrers
+		direct.referrers =
+
+		# cat=plugin.tx_twgoogleanalytics/searchengines/a; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:searchengines.searchengines
+		searchengines =
+	}
+}

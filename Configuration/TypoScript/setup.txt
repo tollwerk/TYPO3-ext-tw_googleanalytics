@@ -1,0 +1,116 @@
+plugin.tx_twgoogleanalytics		= USER
+plugin.tx_twgoogleanalytics {
+	view {
+		templateRootPath					= {$plugin.tx_twgoogleanalytics.view.templateRootPath}
+		partialRootPath						= {$plugin.tx_twgoogleanalytics.view.partialRootPath}
+		layoutRootPath						= {$plugin.tx_twgoogleanalytics.view.layoutRootPath}
+	}
+	settings {
+		enable										= {$plugin.tx_twgoogleanalytics.settings.enable}
+		debug											= {$plugin.tx_twgoogleanalytics.settings.debug}
+		wpid											= {$plugin.tx_twgoogleanalytics.settings.wpid}
+		features {
+			anonymizeIP							= {$plugin.tx_twgoogleanalytics.settings.anonymizeIP}
+			track {
+				title									= {$plugin.tx_twgoogleanalytics.settings.track.title}
+				client								= {$plugin.tx_twgoogleanalytics.settings.track.client}
+				flash									= {$plugin.tx_twgoogleanalytics.settings.track.flash}
+			}
+		}
+		crossdomain {
+			sub											= {$plugin.tx_twgoogleanalytics.settings.domain.sub}
+			main										= {$plugin.tx_twgoogleanalytics.settings.domain.main}
+			cross										= {$plugin.tx_twgoogleanalytics.settings.domain.cross}
+		}
+		external {
+			track										= {$plugin.tx_twgoogleanalytics.settings.external.track}
+			prefix									= {$plugin.tx_twgoogleanalytics.settings.external.prefix}
+			restrict								= {$plugin.tx_twgoogleanalytics.settings.external.restrict}
+		}
+		email {
+			track										= {$plugin.tx_twgoogleanalytics.settings.email.track}
+			prefix									= {$plugin.tx_twgoogleanalytics.settings.email.prefix}
+			restrict								= {$plugin.tx_twgoogleanalytics.settings.email.restrict}
+		}
+		download {
+			track										= {$plugin.tx_twgoogleanalytics.settings.download.track}
+			prefix									= {$plugin.tx_twgoogleanalytics.settings.download.prefix}
+			template								= {$plugin.tx_twgoogleanalytics.settings.download.template}
+			list										= {$plugin.tx_twgoogleanalytics.settings.download.list}
+		}
+		direct {
+			keywords								= {$plugin.tx_twgoogleanalytics.settings.direct.keywords}
+			referrers								= {$plugin.tx_twgoogleanalytics.settings.direct.referrers}
+		}
+		searchengines							= {$plugin.tx_twgoogleanalytics.settings.searchengines}
+		customVariables {
+
+		}
+		customDimensions {
+		
+		}
+		customMetrics {
+			
+		}
+		pageUrl										= TEXT
+		pageUrl.data							= getenv:REQUEST_URI
+	}
+}
+
+# ACTIVATION VIA TYPOSCRIPT (CONVENTIONAL TRACKING / ga.js)
+[globalVar = LIT:1 = {$plugin.tx_twgoogleanalytics.settings.enable}] && [globalVar = TSFE:page|tx_twgoogleanalytics_no_tracking = 0]
+
+	######################################################################################################
+	# PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
+	# ----------------------------------------------------------------------------------------------------
+	page.includeJS.googleanalytics		= EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics.js
+	page.includeJS.googleanalytics {
+		forceOnTop								= 1
+		disableCompression				= 1
+	}
+	######################################################################################################
+
+	plugin.tx_twgoogleanalytics {
+		userFunc									= tx_extbase_core_bootstrap->run
+		vendorName								= Tollwerk
+		extensionName							= TwGoogleanalytics
+		pluginName								= Googleanalytics
+		controller								= Googleanalytics
+		action										= track
+		switchableControllerActions {
+			Googleanalytics {
+				1											= track
+			}
+		}
+	}
+
+[global]
+
+# ACTIVATION VIA TYPOSCRIPT (UNIVERSAL TRACKING / analytics.js)
+[globalVar = LIT:2 = {$plugin.tx_twgoogleanalytics.settings.enable}] && [globalVar = TSFE:page|tx_twgoogleanalytics_no_tracking = 0]
+
+	######################################################################################################
+	# PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
+	# ----------------------------------------------------------------------------------------------------
+	page.includeJS.googleanalytics		= EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics_universal.js
+	page.includeJS.googleanalytics {
+		forceOnTop								= 1
+		disableCompression				= 1
+	}
+	######################################################################################################
+
+	plugin.tx_twgoogleanalytics {
+		userFunc									= tx_extbase_core_bootstrap->run
+		vendorName								= Tollwerk
+		extensionName							= TwGoogleanalytics
+		pluginName								= Googleanalytics
+		controller								= Googleanalytics
+		action										= track
+		switchableControllerActions {
+			Googleanalytics {
+				1											= track
+			}
+		}
+	}
+
+[global]

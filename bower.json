@@ -1,0 +1,33 @@
+{
+  "name": "Google Analytics TYPO3 extension",
+  "version": "v2.5.3",
+  "description": "TYPO3 frontend plugin for advanced Google Analytics integration with a wide range of features (tw_googleanalytics)",
+  "main": ["Classes/Controller/GoogleanalyticsController.php"],
+  "keywords": [
+    "google",
+    "analytics",
+    "website",
+    "statistics",
+    "tracking",
+    "ga",
+    "typo3",
+    "cms",
+    "extension"
+  ],
+  "authors": [
+    "Joschi Kuphal <joschi@kuphal.net>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jkphl/TYPO3-ext-tw_googleanalytics",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "example",
+    "Gruntfile.js",
+    "composer.json",
+    "package.json"
+  ],
+  "directory": "typo3conf/ext"
+}

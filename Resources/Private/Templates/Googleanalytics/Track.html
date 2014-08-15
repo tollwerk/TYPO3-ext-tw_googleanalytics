@@ -16,6 +16,7 @@ if (typeof(tw_gat) == 'object') {
 		.addDirectReferrers(]]><f:format.raw>{settings.direct.referrers}</f:format.raw><![CDATA[)
 		.addSearchEngines(]]><f:format.raw>{settings.searchengines}</f:format.raw><![CDATA[)
 		.registerCustomVariables(]]><f:format.raw>{customVariables}</f:format.raw><![CDATA[)]]></f:else></f:if><![CDATA[
+		.displayAdvertising(]]>{settings.features.displayAdvertising}<![CDATA[)
 		.trackPageview("]]>{pageUrl}<![CDATA[");
 	(function(){ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = '//]]><f:if condition="{settings.enable} == 2"><f:then>www.google-analytics.com/analytics.js</f:then><f:else><f:if condition="{settings.features.advertising}"><f:then>stats.g.doubleclick.net/dc.js</f:then><f:else>www.google-analytics.com/ga.js</f:else></f:if></f:else></f:if><![CDATA['; ga.onload = function() { tw_gat.installTrackingHandlers(2); }; ga.onreadystatechange = function() { if (this.readyState in {'loaded': 1, 'complete': 1}) tw_gat.installTrackingHandlers(2); }; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
 }

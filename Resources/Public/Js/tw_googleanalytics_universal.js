@@ -305,18 +305,55 @@ tw_gat.anonymizeIP = function(anonymizeIP) {
     return this;
 }
 
+
 /**
  * Enable remarketing and advertising reporting features
- * 
+ *
  * @param {Boolean} advertising         Remarketing and advertising reporting features
  * @return {Object}                     Self reference (liquid interface)
  */
 tw_gat.enableAdvertising = function(advertising) {
     if (!!advertising && this._accountId) {
-        this._advertising = true;
+	    this._advertising = true;
     }
     return this;
 }
+
+/**
+ * Display Advertising
+ *
+ * @param {Boolean} displayAdvertising  Support Display Advertising
+ * @return {Object}                     Self reference (liquid interface)
+ */
+tw_gat.displayAdvertising = function(displayAdvertising) {
+    if (this._createTracker()) {
+	    if (this._debug && console) {
+		    console.log('Universal Analytics', 'require', 'displayfeatures');
+	    }
+	    if (this._debug < 2) {
+		    ga('require', 'displayfeatures');
+	    }
+    }
+    return this;
+};
+
+/**
+ * Enhanced Link Attribution
+ *
+ * @param {Boolean} enhancedLinkAttribution
+ * @return {Object} Self reference (liquid interface)
+ */
+tw_gat.enhancedLinkAttribution = function(enhancedLinkAttribution) {
+	if (this._createTracker()) {
+		if (this._debug && console) {
+			console.log('Universal Analytics', 'require', 'linkid');
+		}
+		if (this._debug < 2) {
+			ga('require', 'linkid', 'linkid.js');
+		}
+	}
+	return this;
+};
 
 /**
  * Track client info

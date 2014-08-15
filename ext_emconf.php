@@ -40,7 +40,6 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
-	'_md5_values_when_last_written' => 'a:21:{s:10:"bower.json";s:4:"b1b0";s:12:"ext_icon.gif";s:4:"fb0a";s:17:"ext_localconf.php";s:4:"cd7a";s:14:"ext_tables.php";s:4:"bd13";s:14:"ext_tables.sql";s:4:"194c";s:11:"LICENSE.txt";s:4:"e8c1";s:9:"README.md";s:4:"6c10";s:48:"Classes/Controller/GoogleanalyticsController.php";s:4:"68c7";s:38:"Configuration/TypoScript/constants.txt";s:4:"6b8b";s:34:"Configuration/TypoScript/setup.txt";s:4:"ca9d";s:46:"Resources/Private/Language/de.locallang_db.xlf";s:4:"45a2";s:46:"Resources/Private/Language/fr.locallang_db.xlf";s:4:"dc49";s:40:"Resources/Private/Language/locallang.xlf";s:4:"18b7";s:43:"Resources/Private/Language/locallang_db.xlf";s:4:"e1f1";s:54:"Resources/Private/Templates/Googleanalytics/Track.html";s:4:"5e0f";s:41:"Resources/Public/Js/tw_googleanalytics.js";s:4:"c949";s:45:"Resources/Public/Js/tw_googleanalytics.min.js";s:4:"a639";s:51:"Resources/Public/Js/tw_googleanalytics_universal.js";s:4:"e4de";s:55:"Resources/Public/Js/tw_googleanalytics_universal.min.js";s:4:"2739";s:14:"doc/manual.pdf";s:4:"8dbe";s:14:"doc/manual.sxw";s:4:"cbb2";}',
 );
 
 ?>

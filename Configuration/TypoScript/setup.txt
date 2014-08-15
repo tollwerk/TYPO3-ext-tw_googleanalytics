@@ -16,6 +16,7 @@ plugin.tx_twgoogleanalytics {
 				client								= {$plugin.tx_twgoogleanalytics.settings.track.client}
 				flash									= {$plugin.tx_twgoogleanalytics.settings.track.flash}
 			}
+			displayAdvertising					= {$plugin.tx_twgoogleanalytics.settings.displayAdvertising}
 		}
 		crossdomain {
 			sub											= {$plugin.tx_twgoogleanalytics.settings.domain.sub}

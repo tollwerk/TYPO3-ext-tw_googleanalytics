@@ -294,6 +294,24 @@ tw_gat.anonymizeIP = function(anonymizeIP) {
 }
 
 /**
+ * Display Advertising
+ * 
+ * @param {Boolean} displayAdvertising  Support Display Advertising
+ * @return {Object}                     Self reference (liquid interface)
+ */
+tw_gat.displayAdvertising = function(displayAdvertising) {
+    if (this._createTracker()) {
+        if (this._debug && console) {
+            console.log('Universal Analytics', 'require', 'displayfeatures');
+        }
+        if (this._debug < 2) {
+            ga('require', 'displayfeatures');
+        }
+    }
+    return this;
+}
+
+/**
  * Track client info
  * 
  * @param {Boolean} clientInfo          Track client info

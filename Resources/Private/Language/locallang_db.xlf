@@ -57,6 +57,9 @@
 			<trans-unit id="features.displayAdvertising" xml:space="preserve">
 				<source>Support Display Advertising (Remarketing)</source>
 			</trans-unit>
+			<trans-unit id="features.enhancedLinkAttribution" xml:space="preserve">
+				<source>Support Enhanced Link Attribution</source>
+			</trans-unit>
 			<trans-unit id="features.track.title" xml:space="preserve">
 				<source>Track page title:You might want to disable this feature if you have no specified or very long and cryptic page titles</source>
 			</trans-unit>

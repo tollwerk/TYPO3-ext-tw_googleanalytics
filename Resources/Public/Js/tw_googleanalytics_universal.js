@@ -290,7 +290,7 @@ tw_gat._createTracker = function() {
 	    this._created = true;
 	}
 	return this._created;
-}
+};
 
 /**
  * IP address anonymization
@@ -303,7 +303,7 @@ tw_gat.anonymizeIP = function(anonymizeIP) {
         this._anonymizeIP = true;
     }
     return this;
-}
+};
 
 
 /**
@@ -364,7 +364,7 @@ tw_gat.enhancedLinkAttribution = function(enhancedLinkAttribution) {
 tw_gat.trackClientInfo = function(clientInfo) {
     // Currently not available for Universal Analytics
     return this;
-}
+};
 
 /**
  * Track flash version
@@ -375,7 +375,7 @@ tw_gat.trackClientInfo = function(clientInfo) {
 tw_gat.trackFlashVersion = function(flashVersion) {
     // Currently not available for Universal Analytics
     return this;
-}
+};
 
 /**
  * Track page title
@@ -386,7 +386,7 @@ tw_gat.trackFlashVersion = function(flashVersion) {
 tw_gat.trackPageTitle = function(pageTitle) {
     // Currently not available for Universal Analytics
     return this;
-}
+};
 
 /**
  * Registering of (top level) domains to be tracked across
@@ -408,7 +408,7 @@ tw_gat.setCrossDomains = function(crossDomains) {
         }
     }
     return this;
-}
+};
 
 /**
  * Activate the click & submit handlers for crossdomain and / or download tracking

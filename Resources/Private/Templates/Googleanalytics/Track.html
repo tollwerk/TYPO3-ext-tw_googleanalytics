@@ -14,6 +14,7 @@ if (typeof(tw_gat) == 'object') {
 		.trackDownloads(]]>{settings.download.track},'{settings.download.prefix}','{settings.download.template}',<f:format.raw>{settings.download.list}</f:format.raw><![CDATA[)
 		]]><f:if condition="{settings.enable} == 2"><f:then><![CDATA[.registerCustomDimensionsMetrics(]]><f:format.raw>{customDimensionsMetrics}</f:format.raw><![CDATA[)
 			.displayAdvertising(]]>{settings.features.displayAdvertising}<![CDATA[)
+			.enhancedLinkAttribution(]]>{settings.features.enhancedLinkAttribution}<![CDATA[)
 		]]></f:then><f:else><![CDATA[.addDirectKeywords(]]><f:format.raw>{settings.direct.keywords}</f:format.raw><![CDATA[)
 		.addDirectReferrers(]]><f:format.raw>{settings.direct.referrers}</f:format.raw><![CDATA[)
 		.addSearchEngines(]]><f:format.raw>{settings.searchengines}</f:format.raw><![CDATA[)

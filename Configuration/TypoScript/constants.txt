@@ -34,6 +34,8 @@ plugin.tx_twgoogleanalytics {
 		track.flash = 1
 		# cat=plugin.tx_twgoogleanalytics/features/e; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.displayAdvertising
 		displayAdvertising = 0
+		# cat=plugin.tx_twgoogleanalytics/features/f; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.enhancedLinkAttribution
+		enhancedLinkAttribution = 0
 
 		# cat=plugin.tx_twgoogleanalytics/crossdomain/a; type=options[None=0,Auto=1,Manual=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:crossdomain.domain.sub
 		domain.sub = 1

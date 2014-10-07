@@ -17,6 +17,7 @@ plugin.tx_twgoogleanalytics {
 				flash									= {$plugin.tx_twgoogleanalytics.settings.track.flash}
 			}
 			displayAdvertising					= {$plugin.tx_twgoogleanalytics.settings.displayAdvertising}
+			enhancedLinkAttribution					= {$plugin.tx_twgoogleanalytics.settings.enhancedLinkAttribution}
 		}
 		crossdomain {
 			sub											= {$plugin.tx_twgoogleanalytics.settings.domain.sub}

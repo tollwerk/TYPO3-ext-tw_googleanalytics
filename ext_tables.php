@@ -32,7 +32,10 @@ if (!defined('TYPO3_MODE')) {
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'tollwerk Google Analytics');
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
+if (version_compare(TYPO3_version, '6.1.0', 'lt')) {
+	\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
+}
+
 $TCA['pages']['columns']['tx_twgoogleanalytics_no_tracking'] = array(
 	'label'			=> 'LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:pages.tx_twgoogleanalytics_no_tracking',
 	'config'		=> Array (

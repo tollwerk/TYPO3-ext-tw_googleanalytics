@@ -1,6 +1,5 @@
 {
   "name": "Google Analytics TYPO3 extension",
-  "version": "v2.5.3",
   "description": "TYPO3 frontend plugin for advanced Google Analytics integration with a wide range of features (tw_googleanalytics)",
   "main": ["Classes/Controller/GoogleanalyticsController.php"],
   "keywords": [

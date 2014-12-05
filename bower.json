@@ -18,7 +18,7 @@
     "Joschi Kuphal <joschi@kuphal.net>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/jkphl/TYPO3-ext-tw_googleanalytics",
+  "homepage": "https://github.com/tollwerk/TYPO3-ext-tw_googleanalytics",
   "ignore": [
     "node_modules",
     "bower_components",

@@ -71,7 +71,7 @@ plugin.tx_twgoogleanalytics {
 	######################################################################################################
 
 	plugin.tx_twgoogleanalytics {
-		userFunc									= tx_extbase_core_bootstrap->run
+		userFunc								= TYPO3\CMS\Extbase\Core\Bootstrap->run
 		vendorName								= Tollwerk
 		extensionName							= TwGoogleanalytics
 		pluginName								= Googleanalytics
@@ -100,7 +100,7 @@ plugin.tx_twgoogleanalytics {
 	######################################################################################################
 
 	plugin.tx_twgoogleanalytics {
-		userFunc									= tx_extbase_core_bootstrap->run
+		userFunc								= TYPO3\CMS\Extbase\Core\Bootstrap->run
 		vendorName								= Tollwerk
 		extensionName							= TwGoogleanalytics
 		pluginName								= Googleanalytics

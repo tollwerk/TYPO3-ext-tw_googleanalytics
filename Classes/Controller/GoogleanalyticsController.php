@@ -305,7 +305,8 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 							// If a database lookup has been requested ...
 							if (strlen($lookup)) {
 								foreach ($gpValues as $key => $value) {
-									$lookup					= str_replace('$'.$key, mysql_real_escape_string($value), $lookup);
+									$lookupTable			= $gpVariables[$key][0] ?: 'pages';
+									$lookup					= str_replace('$'.$key, $GLOBALS['TYPO3_DB']->quoteStr($value, $lookupTable), $lookup);
 								}
 								
 								$result						= $GLOBALS['TYPO3_DB']->sql_query($lookup);

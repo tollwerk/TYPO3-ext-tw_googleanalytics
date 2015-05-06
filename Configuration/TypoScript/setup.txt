@@ -10,6 +10,7 @@ plugin.tx_twgoogleanalytics {
 		debug											= {$plugin.tx_twgoogleanalytics.settings.debug}
 		wpid											= {$plugin.tx_twgoogleanalytics.settings.wpid}
 		features {
+			advertising									= {$plugin.tx_twgoogleanalytics.settings.advertising}
 			anonymizeIP							= {$plugin.tx_twgoogleanalytics.settings.anonymizeIP}
 			track {
 				title									= {$plugin.tx_twgoogleanalytics.settings.track.title}

@@ -4,7 +4,7 @@
  * Compatible with ga.js
  *
  * @package		tw_googleanalytics
- * @copyright	Copyright © 2013 tollwerk® GmbH (http://tollwerk.de)
+ * @copyright	Copyright © 2015 tollwerk® GmbH (http://tollwerk.de)
  * @author		Dipl.-Ing. Joschi Kuphal <joschi@tollwerk.de>
  */
 
@@ -386,6 +386,21 @@ tw_gat.anonymizeIP = function(anonymizeIP) {
         }
         if (this._debug < 2) {
             _gaq.push(['_gat._anonymizeIp']);
+        }
+    }
+    return this;
+}
+
+/**
+ * Enable remarketing and advertising reporting features
+ * 
+ * @param {Boolean} advertising         Remarketing and advertising reporting features
+ * @return {Object}                     Self reference (liquid interface)
+ */
+tw_gat.enableAdvertising = function(advertising) {
+    if (!!advertising && this._accountId) {
+       	if (this._debug && console) {
+            console.log('Google Analytics', '[ Enabled remarketing & advertising reporting features ]');
         }
     }
     return this;

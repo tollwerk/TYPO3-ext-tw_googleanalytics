@@ -4,7 +4,7 @@
  * Compatible with universial.js
  *
  * @package		tw_googleanalytics
- * @copyright	Copyright © 2013 tollwerk® GmbH (http://tollwerk.de)
+ * @copyright	Copyright © 2015 tollwerk® GmbH (http://tollwerk.de)
  * @author		Dipl.-Ing. Joschi Kuphal <joschi@tollwerk.de>
  */
 
@@ -126,6 +126,12 @@ var tw_gat = {
      * @type {Boolean}
      */
     '_anonymizeIP': false,
+    /**
+     * Remarketing and advertising reporting features
+     * 
+     * @type {Boolean}
+     */
+    '_advertising': false,
     /**
      * Tracker has been created
      * 
@@ -269,6 +275,12 @@ tw_gat._createTracker = function() {
 		        ga('create', this._accountId);
 		    }
 		}
+		if (this._advertising) {
+			if (this._debug && console) {
+				console.log('Universal Analytics', 'require', 'displayfeatures', '[ Enabled remarketing & advertising reporting features ]');
+			}
+			ga('require', 'displayfeatures');
+		}
 		if (this._anonymizeIP) {
 			if (this._debug && console) {
 				console.log('Universal Analytics', 'set', 'anonymizeIp', true);
@@ -289,6 +301,19 @@ tw_gat._createTracker = function() {
 tw_gat.anonymizeIP = function(anonymizeIP) {
     if (!!anonymizeIP && this._accountId) {
         this._anonymizeIP = true;
+    }
+    return this;
+}
+
+/**
+ * Enable remarketing and advertising reporting features
+ * 
+ * @param {Boolean} advertising         Remarketing and advertising reporting features
+ * @return {Object}                     Self reference (liquid interface)
+ */
+tw_gat.enableAdvertising = function(advertising) {
+    if (!!advertising && this._accountId) {
+        this._advertising = true;
     }
     return this;
 }

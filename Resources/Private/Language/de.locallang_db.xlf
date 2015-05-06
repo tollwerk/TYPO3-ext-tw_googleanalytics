@@ -1,148 +1,116 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2013-02-09T14:05:51Z" product-name="tw_googleanalytics">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-09T14:05:51Z" product-name="tw_googleanalytics">
 		<header/>
 		<body>
 			<trans-unit id="features" xml:space="preserve" approved="yes">
 				<source>Features</source>
-				<target>Funktionen</target>
-			</trans-unit>
+			<target state="translated">Funktionen</target></trans-unit>
 			<trans-unit id="common" xml:space="preserve" approved="yes">
 				<source>Common settings</source>
-				<target>Allgemeine Einstellungen</target>
-			</trans-unit>
+			<target state="translated">Allgemeine Einstellungen</target></trans-unit>
 			<trans-unit id="crossdomain" xml:space="preserve" approved="yes">
 				<source>Cross-domain tracking</source>
-				<target>Cross-Domain-Tracking</target>
-			</trans-unit>
+			<target state="translated">Cross-Domain-Tracking</target></trans-unit>
 			<trans-unit id="external" xml:space="preserve" approved="yes">
 				<source>E-Mail &amp; external link tracking</source>
-				<target>Tracking von E-Mail- &amp; externen Verknüpfungen</target>
-			</trans-unit>
+			<target state="translated">Tracking von E-Mail- &amp; externen Verknüpfungen</target></trans-unit>
 			<trans-unit id="download" xml:space="preserve" approved="yes">
 				<source>Download tracking</source>
-				<target>Tracking von Download-Verknüpfungen</target>
-			</trans-unit>
+			<target state="translated">Tracking von Download-Verknüpfungen</target></trans-unit>
 			<trans-unit id="direct" xml:space="preserve" approved="yes">
 				<source>Direct traffic</source>
-				<target>Direkter Traffic</target>
-			</trans-unit>
+			<target state="translated">Direkter Traffic</target></trans-unit>
 			<trans-unit id="searchengines" xml:space="preserve" approved="yes">
 				<source>Search engines</source>
-				<target>Suchmaschinen</target>
-			</trans-unit>
+			<target state="translated">Suchmaschinen</target></trans-unit>
 			<trans-unit id="pages.tx_twgoogleanalytics_no_tracking" xml:space="preserve" approved="yes">
 				<source>Google Analytics tracking</source>
-				<target>Google Analytics-Tracking</target>
-			</trans-unit>
+			<target state="translated">Google Analytics-Tracking</target></trans-unit>
 			<trans-unit id="file" xml:space="preserve" approved="yes">
 				<source>Files &amp; directories</source>
-				<target>Dateien &amp; Verzeichnisse</target>
-			</trans-unit>
+			<target state="translated">Dateien &amp; Verzeichnisse</target></trans-unit>
 			<trans-unit id="file.templateRootPath" xml:space="preserve" approved="yes">
 				<source>Path to template root (FE):You can alter this in case you want to customize the tracking code output</source>
-				<target>Pfad zum Template-Verzeichnis (FE):Wählen Sie ein benutzerdefiniertes Template-Verzeichnis, wenn sie den Tracking-Code anpassen möchten</target>
-			</trans-unit>
+			<target state="translated">Pfad zum Template-Verzeichnis (FE):Wählen Sie ein benutzerdefiniertes Template-Verzeichnis, wenn sie den Tracking-Code anpassen möchten</target></trans-unit>
 			<trans-unit id="file.partialRootPath" xml:space="preserve" approved="yes">
 				<source>Path to template partials (FE):You can alter this, though the standard plugin doesn't use partials ...</source>
-				<target>Pfad zum Partial-Verzeichnis (FE):Mit dieser Einstellung können Sie das Partial-Verzeichnis anpassen, wenngleich auch der Standard-Plugin keine Partials nutzt ...</target>
-			</trans-unit>
+			<target state="translated">Pfad zum Partial-Verzeichnis (FE):Mit dieser Einstellung können Sie das Partial-Verzeichnis anpassen, wenngleich auch der Standard-Plugin keine Partials nutzt ...</target></trans-unit>
 			<trans-unit id="file.layoutRootPath" xml:space="preserve" approved="yes">
 				<source>Path to template layouts (FE):You can alter this, though the standard plugin doesn't use layouts ...</source>
-				<target>Pfad zum Layout-Verzeichnis (FE):Mit dieser Einstellung können Sie das Layout-Verzeichnis anpassen, wenngleich auch der Standard-Plugin keine Layouts nutzt ...</target>
-			</trans-unit>
+			<target state="translated">Pfad zum Layout-Verzeichnis (FE):Mit dieser Einstellung können Sie das Layout-Verzeichnis anpassen, wenngleich auch der Standard-Plugin keine Layouts nutzt ...</target></trans-unit>
 			<trans-unit id="common.enable" xml:space="preserve" approved="yes">
 				<source>Enable Google Analytics Tracking:This has to be enabled for tracking your website with Google / Universal Analytics</source>
-				<target>Google Analytics-Tracking aktivieren:Aktivieren Sie diese Option, um Ihre Website per Google / Universal Analytics zu erfassen</target>
-			</trans-unit>
+			<target state="translated">Google Analytics-Tracking aktivieren:Aktivieren Sie diese Option, um Ihre Website per Google / Universal Analytics zu erfassen</target></trans-unit>
 			<trans-unit id="common.wpid" xml:space="preserve" approved="yes">
-				<source>Google Analytics &quot;Web Property-ID&quot;:The &quot;Web Property-ID&quot; is issued by Google Analytics and uniquely identifies your website. It should have the format UA-XXXXX-X and can be found in the &quot;Admin &gt; Account Administration&quot; section of your Google Analytics interface</source>
-				<target>Google Analytics &quot;Web Property-ID&quot;:Die &quot;Web Property-ID&quot; wird Ihnen von Google Analytics zugeteilt und identifiziert Ihre Webseite eindeutig. Sie hat das Format UA-XXXXX-X und kann bei Google Analytics im Bereich &quot;Verwaltung &gt; Kontoverwaltung&quot; gefunden werden</target>
-			</trans-unit>
+				<source>Google Analytics "Web Property-ID":The "Web Property-ID" is issued by Google Analytics and uniquely identifies your website. It should have the format UA-XXXXX-X and can be found in the "Admin &gt; Account Administration" section of your Google Analytics interface</source>
+			<target state="translated">Google Analytics "Web Property-ID":Die "Web Property-ID" wird Ihnen von Google Analytics zugeteilt und identifiziert Ihre Webseite eindeutig. Sie hat das Format UA-XXXXX-X und kann bei Google Analytics im Bereich "Verwaltung &gt; Kontoverwaltung" gefunden werden</target></trans-unit>
 			<trans-unit id="common.debug" xml:space="preserve" approved="yes">
 				<source>Debug mode:Enable the debug mode in order to get detailed output to your javascript console (deactivate for production use)</source>
-				<target>Debug mode:Aktivieren Sie den Fehlerbehebungsmodus, um ausführliche Ausgaben in Ihrer JavaScript-Konsole zu erhalten (für den Produktivbetrieb bitte unbedingt deaktivieren)</target>
-			</trans-unit>
+			<target state="translated">Debug mode:Aktivieren Sie den Fehlerbehebungsmodus, um ausführliche Ausgaben in Ihrer JavaScript-Konsole zu erhalten (für den Produktivbetrieb bitte unbedingt deaktivieren)</target></trans-unit>
+			<trans-unit id="common.advertising" xml:space="preserve" approved="yes">
+				<source>Remarketing &amp; advertising:Enable Remarketing and Advertising Reporting Features to see data in the demographics and interest reports</source>
+			<target state="translated">Werbefunktionen:Aktivieren Sie die Werbefunktionen, um Daten zu demografischen Merkmale und Interessen in Ihre Berichte aufzunehmen.</target></trans-unit>
 			<trans-unit id="features.anonymizeIP" xml:space="preserve" approved="yes">
 				<source>Anonymize IP address:Activate this feature for anonymizing your visiors' IP addresses (e.g. required by german law)</source>
-				<target>IP-Adresse anonymisieren:Aktivieren Sie diese Option, um die IP-Adresse Ihrer Besucher zu anonymisieren (bspw. erforderlich nach deutscher Rechtslage)</target>
-			</trans-unit>
+			<target state="translated">IP-Adresse anonymisieren:Aktivieren Sie diese Option, um die IP-Adresse Ihrer Besucher zu anonymisieren (bspw. erforderlich nach deutscher Rechtslage)</target></trans-unit>
 			<trans-unit id="features.track.title" xml:space="preserve" approved="yes">
 				<source>Track page title:You might want to disable this feature if you have no specified or very long and cryptic page titles</source>
-				<target>Seitentitel erfassen:Sie können diese Option deaktivieren, wenn Sie bspw. keine oder sehr lange, kryptische Seitentitel verwenden, die Sie in der Google Analytics-Ansicht stören würden</target>
-			</trans-unit>
+			<target state="translated">Seitentitel erfassen:Sie können diese Option deaktivieren, wenn Sie bspw. keine oder sehr lange, kryptische Seitentitel verwenden, die Sie in der Google Analytics-Ansicht stören würden</target></trans-unit>
 			<trans-unit id="features.track.client" xml:space="preserve" approved="yes">
 				<source>Track client info:Disable this if you do not want to track your visitors' browser types / versions</source>
-				<target>Browserinformationen erfassen:Deaktivieren Sie diese Option, wenn Sie keine Details über die Browser Ihrer Besucher (Typ, Version, etc.) erfassen möchten</target>
-			</trans-unit>
+			<target state="translated">Browserinformationen erfassen:Deaktivieren Sie diese Option, wenn Sie keine Details über die Browser Ihrer Besucher (Typ, Version, etc.) erfassen möchten</target></trans-unit>
 			<trans-unit id="features.track.flash" xml:space="preserve" approved="yes">
 				<source>Track flash version:Disable this if you do not want to track your visitors' flash plugin types / versions</source>
-				<target>Flash-Player-Informationen erfassen:Deaktivieren Sie diese Option, wenn Sie keine Details über die Flash-Player Ihrer Besucher (Typ, Version, etc.) erfassen möchten</target>
-			</trans-unit>
+			<target state="translated">Flash-Player-Informationen erfassen:Deaktivieren Sie diese Option, wenn Sie keine Details über die Flash-Player Ihrer Besucher (Typ, Version, etc.) erfassen möchten</target></trans-unit>
 			<trans-unit id="crossdomain.domain.sub" xml:space="preserve" approved="yes">
-				<source>Tracking across sub-domains:If you want to enable tracking across multiple sub-domains, set this to &quot;Manual&quot; and enter the main domain name for all the sub-domains you want to track (see next setting &quot;domain.main&quot;). Set this to &quot;None&quot; in order to ensure that the cookies in a given domain are not accessible by any sub-domains</source>
-				<target>Subdomain-übergreifendes Tracking:Um Tracking über mehrere Subdomains hinweg zu aktivieren, setzen Sie diese Option bitte auf &quot;Manual&quot; und geben Sie mittels der nächsten Einstellung (domain.main) die Hauptdomain aller zu erfassenden Subdomains an. Setzen Sie dagegen diese Option auf &quot;None&quot;, wenn sie sicherstellen möchten, dass die verwendeten Tracking-Cookies keinesfalls in Subdomains zugreifbar sind</target>
-			</trans-unit>
+				<source>Tracking across sub-domains:If you want to enable tracking across multiple sub-domains, set this to "Manual" and enter the main domain name for all the sub-domains you want to track (see next setting "domain.main"). Set this to "None" in order to ensure that the cookies in a given domain are not accessible by any sub-domains</source>
+			<target state="translated">Subdomain-übergreifendes Tracking:Um Tracking über mehrere Subdomains hinweg zu aktivieren, setzen Sie diese Option bitte auf "Manual" und geben Sie mittels der nächsten Einstellung (domain.main) die Hauptdomain aller zu erfassenden Subdomains an. Setzen Sie dagegen diese Option auf "None", wenn sie sicherstellen möchten, dass die verwendeten Tracking-Cookies keinesfalls in Subdomains zugreifbar sind</target></trans-unit>
 			<trans-unit id="crossdomain.domain.main" xml:space="preserve" approved="yes">
-				<source>Main domain name:If you've chosen &quot;Manual&quot; domain name entry above (setting &quot;domain.sub&quot;), please enter your main domain name here (it might be preceded by a dot in order to assure that *only* sub-domains will be tracked and the main domain itself be ommited)</source>
-				<target>Hauptdomain:Wenn Sie in der vorangegangen Einstellung (&quot;domain.sub&quot;) den Wert &quot;Manual&quot; gewählt haben, dann tragen Sie hier den Namen der Hauptdomain ein (dem Namen kann ein Punkt vorangestellt sein, um sicherzustellen, dass *ausschließlich* Subdomains erfasst werden, nicht dagegen jedoch die Hauptdomain selbst)</target>
-			</trans-unit>
+				<source>Main domain name:If you've chosen "Manual" domain name entry above (setting "domain.sub"), please enter your main domain name here (it might be preceded by a dot in order to assure that *only* sub-domains will be tracked and the main domain itself be ommited)</source>
+			<target state="translated">Hauptdomain:Wenn Sie in der vorangegangen Einstellung ("domain.sub") den Wert "Manual" gewählt haben, dann tragen Sie hier den Namen der Hauptdomain ein (dem Namen kann ein Punkt vorangestellt sein, um sicherzustellen, dass *ausschließlich* Subdomains erfasst werden, nicht dagegen jedoch die Hauptdomain selbst)</target></trans-unit>
 			<trans-unit id="crossdomain.domain.cross" xml:space="preserve" approved="yes">
 				<source>Tracking across multiple domains:If you want to enable tracking across multiple (top level) domains, enter the domain names here (separated by a comma)</source>
-				<target>Domain-übergreifendes Tracking:Um Tracking über mehrere (Haupt-)Domains hinweg zu aktivieren, tragen Sie hier bitte die relevanten Domainnamen ein (kommasepariert)</target>
-			</trans-unit>
+			<target state="translated">Domain-übergreifendes Tracking:Um Tracking über mehrere (Haupt-)Domains hinweg zu aktivieren, tragen Sie hier bitte die relevanten Domainnamen ein (kommasepariert)</target></trans-unit>
 			<trans-unit id="external.external.track" xml:space="preserve" approved="yes">
 				<source>Track external URLs:Choose whether and how traversals to external website URLs should be tracked</source>
-				<target>Externe URLs erfassen:Wählen Sie, ob und wie Übergänge zu externen URLs erfasst werden sollen</target>
-			</trans-unit>
+			<target state="translated">Externe URLs erfassen:Wählen Sie, ob und wie Übergänge zu externen URLs erfasst werden sollen</target></trans-unit>
 			<trans-unit id="external.external.prefix" xml:space="preserve" approved="yes">
 				<source>External URL prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for external URLs</source>
-				<target>Präfix / Kategorie für externe URLs:Geben Sie ein Präfix (bei Erfassung als PageView) bzw. eine Kategorie (bei Erfassung als Event) an, die zur Erfassung der Übergänge zu externen URLs verwendet werden soll</target>
-			</trans-unit>
+			<target state="translated">Präfix / Kategorie für externe URLs:Geben Sie ein Präfix (bei Erfassung als PageView) bzw. eine Kategorie (bei Erfassung als Event) an, die zur Erfassung der Übergänge zu externen URLs verwendet werden soll</target></trans-unit>
 			<trans-unit id="external.external.restrict" xml:space="preserve" approved="yes">
 				<source>Restrict to domains:Enter a comma separated list of domains if you would like to restrict tracking to those ones</source>
-				<target>Auf Domains beschränken:Geben Sie eine kommaseparierte Liste von Domains an, wenn Sie die Erfassung von Übergängen zu externen URLs auf diese Domains beschränken möchten</target>
-			</trans-unit>
+			<target state="translated">Auf Domains beschränken:Geben Sie eine kommaseparierte Liste von Domains an, wenn Sie die Erfassung von Übergängen zu externen URLs auf diese Domains beschränken möchten</target></trans-unit>
 			<trans-unit id="external.email.track" xml:space="preserve" approved="yes">
 				<source>Track e-mail links:Choose whether and how e-mail links should be tracked</source>
-				<target>E-Mail-Verknüpfungen erfassen:Wählen sie, ob und wie die Nutzung von E-Mail-Verknüpfungen erfasst werden soll</target>
-			</trans-unit>
+			<target state="translated">E-Mail-Verknüpfungen erfassen:Wählen sie, ob und wie die Nutzung von E-Mail-Verknüpfungen erfasst werden soll</target></trans-unit>
 			<trans-unit id="external.email.prefix" xml:space="preserve" approved="yes">
 				<source>E-mail link prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for e-mail links</source>
-				<target>Präfix / Kategorie für E-Mail-Verknüpfungen:Geben Sie ein Präfix (bei Erfassung als PageView) bzw. eine Kategorie (bei Erfassung als Event) an, die zur Erfassung der Nutzung von E-Mail-Verknüpfungen verwendet werden soll</target>
-			</trans-unit>
+			<target state="translated">Präfix / Kategorie für E-Mail-Verknüpfungen:Geben Sie ein Präfix (bei Erfassung als PageView) bzw. eine Kategorie (bei Erfassung als Event) an, die zur Erfassung der Nutzung von E-Mail-Verknüpfungen verwendet werden soll</target></trans-unit>
 			<trans-unit id="external.email.restrict" xml:space="preserve" approved="yes">
 				<source>Restrict to e-mail addresses:Enter a comma separated list of e-mail addresses if you would like to restrict tracking to those ones</source>
-				<target>Auf E-Mail-Adressen beschränken:Geben Sie eine kommaseparierte Liste von E-Mail-Adressen an, wenn Sie die Erfassung der Nutzung von E-Mail-Verknüpfungen auf diese Adressen beschränken möchten</target>
-			</trans-unit>
+			<target state="translated">Auf E-Mail-Adressen beschränken:Geben Sie eine kommaseparierte Liste von E-Mail-Adressen an, wenn Sie die Erfassung der Nutzung von E-Mail-Verknüpfungen auf diese Adressen beschränken möchten</target></trans-unit>
 			<trans-unit id="download.download.track" xml:space="preserve" approved="yes">
 				<source>Track downloads:Choose whether and how file downloads should be tracked</source>
-				<target>Downloads erfassen:Wählen Sie, ob und wie die Nutzung von Download-Verknüpfungen erfasst werden soll</target>
-			</trans-unit>
+			<target state="translated">Downloads erfassen:Wählen Sie, ob und wie die Nutzung von Download-Verknüpfungen erfasst werden soll</target></trans-unit>
 			<trans-unit id="download.download.prefix" xml:space="preserve" approved="yes">
 				<source>Download link prefix / category:Enter the prefix (tracking as pageView) respectively the event category (tracking as event) that should be used for download links</source>
-				<target>Präfix / Kategorie für Download-Verknüpfungen:Geben Sie ein Präfix (bei Erfassung als PageView) bzw. eine Kategorie (bei Erfassung als Event) an, die zur Erfassung der Nutzung von Download-Verknüpfungen verwendet werden soll</target>
-			</trans-unit>
+			<target state="translated">Präfix / Kategorie für Download-Verknüpfungen:Geben Sie ein Präfix (bei Erfassung als PageView) bzw. eine Kategorie (bei Erfassung als Event) an, die zur Erfassung der Nutzung von Download-Verknüpfungen verwendet werden soll</target></trans-unit>
 			<trans-unit id="download.download.template" xml:space="preserve" approved="yes">
 				<source>Download link template:Enter the tracking template string used for should be used for download links (see manual for details)</source>
-				<target>Erfassungsmuster:Geben Sie eine Mustervorlage an, mit deren Hilfe der zu erfassende Dateiname formatiert wird (Details im Handbuch)</target>
-			</trans-unit>
+			<target state="translated">Erfassungsmuster:Geben Sie eine Mustervorlage an, mit deren Hilfe der zu erfassende Dateiname formatiert wird (Details im Handbuch)</target></trans-unit>
 			<trans-unit id="download.download.list" xml:space="preserve" approved="yes">
 				<source>Download folders &amp; extensions:Enter the folders and file extensions that should be tracked. You may provide a comma separated list of directory-extensions-combinations like this: /path/to/folder=pdf doc zip, /path/to/another/folder=zip rar exe</source>
-				<target>Verzeichnisse &amp; Dateierweiterungen:Geben Sie eine Liste der Verzeichnisse und Dateierweiterungen an, für welche Download-Verknüpfungen überwacht werden sollen. Sie können eine kommaseparierte Liste mehrerer Verzeichnis-Erweiterungs-Kombinationen wie folgt angeben: /pfad/zum/verzeichnis=pdf doc zip, /pfad/zu/anderem/verzeichnis=zip rar exe</target>
-			</trans-unit>
+			<target state="translated">Verzeichnisse &amp; Dateierweiterungen:Geben Sie eine Liste der Verzeichnisse und Dateierweiterungen an, für welche Download-Verknüpfungen überwacht werden sollen. Sie können eine kommaseparierte Liste mehrerer Verzeichnis-Erweiterungs-Kombinationen wie folgt angeben: /pfad/zum/verzeichnis=pdf doc zip, /pfad/zu/anderem/verzeichnis=zip rar exe</target></trans-unit>
 			<trans-unit id="direct.direct.keywords" xml:space="preserve" approved="yes">
 				<source>Direct traffic keywords:Enter a comma separated list of keywords which – if used as search terms by your visitors - should be registered as direct traffic (instead of organic / search engine traffic). It is common to enter one's domain here ...</source>
-				<target>Schlüsselbegriffe für Direktzugriff:Geben Sie eine kommaseparierte Liste von Begriffen an, die – sofern als Suchbegriff bei Suchmaschinen genutzt – dafür sorgen, dass ein resultierender Besuch Ihrer Website als Direktzugriff registriert wird (anstelle als organischer / Suchmaschinenzugriff). Es ist z.B. üblich, hier den eigenen Domainnamen anzugeben ...</target>
-			</trans-unit>
+			<target state="translated">Schlüsselbegriffe für Direktzugriff:Geben Sie eine kommaseparierte Liste von Begriffen an, die – sofern als Suchbegriff bei Suchmaschinen genutzt – dafür sorgen, dass ein resultierender Besuch Ihrer Website als Direktzugriff registriert wird (anstelle als organischer / Suchmaschinenzugriff). Es ist z.B. üblich, hier den eigenen Domainnamen anzugeben ...</target></trans-unit>
 			<trans-unit id="direct.direct.referrers" xml:space="preserve" approved="yes">
 				<source>Direct traffic referrer:Enter a comma separated list of domains which should be treated as direct traffic sources (instead of external referrers). You could e.g. enter secondary domains you use</source>
-				<target>Referrer für Direktzugriff:Geben Sie eine kommaseparierte Liste von Domainnamen an, zu denen Besuche, die von diesen Domains herrühren, als Direktzugriff registriert werden sollen (anstelle als externe Verweisezugriffe). Sie können hier bspw. Ihre eigenen Sekundärdomains angeben</target>
-			</trans-unit>
+			<target state="translated">Referrer für Direktzugriff:Geben Sie eine kommaseparierte Liste von Domainnamen an, zu denen Besuche, die von diesen Domains herrühren, als Direktzugriff registriert werden sollen (anstelle als externe Verweisezugriffe). Sie können hier bspw. Ihre eigenen Sekundärdomains angeben</target></trans-unit>
 			<trans-unit id="searchengines.searchengines" xml:space="preserve" approved="yes">
-				<source>Search engine traffic sources:Enter a comma separated list of search engine / keyword name definitions that should be considered as search engine traffic sources (e.g. &quot;MySpecialSearchEngine=query, AnotherSE=search&quot;). If you want a search engine to be prepended to the list of known traffic sources, append an exclamation mark to the definition (e.g. &quot;MostImportantSearchEngine=q!&quot;)</source>
-				<target>Suchmaschinen-Erkennungsmuster: Geben Sie hier eine kommaseparierte Liste von Suchmaschinen-Erkennungsmustern an. Ein Erkennungsmuster ist die Kombination aus Suchmaschinenname und GET-Parametername, der für die Suchbegriffe verwendet wird (z.B. &quot;MeineSpezialSuchmaschine=query, NochEineSM=search&quot;). Wenn Sie ein Erkennungsmuster an den Beginn der internen Erkennungsliste setzen und damit priorisieren möchten, schließen Sie das Erkennungsmuster mit einem Ausrufezeichen ab (z.B. &quot;AllerWichtigsteSuchmaschine=q!&quot;)</target>
-			</trans-unit>
+				<source>Search engine traffic sources:Enter a comma separated list of search engine / keyword name definitions that should be considered as search engine traffic sources (e.g. "MySpecialSearchEngine=query, AnotherSE=search"). If you want a search engine to be prepended to the list of known traffic sources, append an exclamation mark to the definition (e.g. "MostImportantSearchEngine=q!")</source>
+			<target state="translated">Suchmaschinen-Erkennungsmuster: Geben Sie hier eine kommaseparierte Liste von Suchmaschinen-Erkennungsmustern an. Ein Erkennungsmuster ist die Kombination aus Suchmaschinenname und GET-Parametername, der für die Suchbegriffe verwendet wird (z.B. "MeineSpezialSuchmaschine=query, NochEineSM=search"). Wenn Sie ein Erkennungsmuster an den Beginn der internen Erkennungsliste setzen und damit priorisieren möchten, schließen Sie das Erkennungsmuster mit einem Ausrufezeichen ab (z.B. "AllerWichtigsteSuchmaschine=q!")</target></trans-unit>
 		</body>
 	</file>
 </xliff>

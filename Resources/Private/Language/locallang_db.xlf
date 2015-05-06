@@ -48,6 +48,9 @@
 			<trans-unit id="common.debug" xml:space="preserve">
 				<source>Debug mode:Enable the debug mode in order to get detailed output to your javascript console (deactivate for production use)</source>
 			</trans-unit>
+			<trans-unit id="common.advertising" xml:space="preserve">
+				<source>Remarketing &amp; advertising:Enable Remarketing and Advertising Reporting Features to see data in the demographics and interest reports</source>
+			</trans-unit>
 			<trans-unit id="features.anonymizeIP" xml:space="preserve">
 				<source>Anonymize IP address:Activate this feature for anonymizing your visiors' IP addresses (e.g. required by german law)</source>
 			</trans-unit>

@@ -152,8 +152,14 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 		foreach((array_key_exists('customDimensions', $this->settings) ? (array)$this->settings['customDimensions'] : array()) as $dimension => $value) {
 			if (preg_match("%^dimension\d+$%", $dimension)) {
 				$customDimensions[$dimension]				= is_array($value) ? $this->_getValue($value) : strval($value);
+				if($this->settings['removeEmptyCustomDimensions'] == 1){
+					if($customDimensions[$dimension] == ''){
+						unset($customDimensions[$dimension]);
+					}
+				}
 			}
 		}
+
 		foreach((array_key_exists('customMetrics', $this->settings) ? (array)$this->settings['customMetrics'] : array()) as $metric => $value) {
 			if (preg_match("%^metric\d+$%", $metric)) {
 				$value										= is_array($value) ? $this->_getValue($value) : strval($value);

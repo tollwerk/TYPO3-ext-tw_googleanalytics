@@ -2,6 +2,8 @@
 
 namespace Tollwerk\TwGoogleanalytics\Controller;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 /***************************************************************
  *  Copyright notice
  *
@@ -150,8 +152,14 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 		foreach((array_key_exists('customDimensions', $this->settings) ? (array)$this->settings['customDimensions'] : array()) as $dimension => $value) {
 			if (preg_match("%^dimension\d+$%", $dimension)) {
 				$customDimensions[$dimension]				= is_array($value) ? $this->_getValue($value) : strval($value);
+				if($this->settings['removeEmptyCustomDimensions'] == 1){
+					if($customDimensions[$dimension] == ''){
+						unset($customDimensions[$dimension]);
+					}
+				}
 			}
 		}
+
 		foreach((array_key_exists('customMetrics', $this->settings) ? (array)$this->settings['customMetrics'] : array()) as $metric => $value) {
 			if (preg_match("%^metric\d+$%", $metric)) {
 				$value										= is_array($value) ? $this->_getValue($value) : strval($value);
@@ -252,16 +260,15 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 	 */
 	protected function _getValue(array $valueConfig) {
 		$returnValue					= null;
-		
+
 		if (array_key_exists('_typoScriptNodeValue', $valueConfig)) {
 			$valueType					= strtolower($valueConfig['_typoScriptNodeValue']);
-			unset($valueConfig['_typoScriptNodeValue']);
-			
+
 			switch ($valueType) {
 				
 				// Value extraction based on a GET / POST variable
 				case 'gp':
-					
+					unset($valueConfig['_typoScriptNodeValue']);
 					// Detect if a database lookup is required
 					if (array_key_exists('lookup', $valueConfig)) {
 						$lookup			= trim($valueConfig['lookup']);
@@ -324,6 +331,19 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 						}
 					}
 					break;
+				// Treat this as a typoscript content object and render it
+				default:
+					$contentRenderer = GeneralUtility::makeInstance('TYPO3\\CMS\\Frontend\\ContentObject\\ContentObjectRenderer');
+					$typoscriptService = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Service\\TypoScriptService');
+					$config = $typoscriptService->convertPlainArrayToTypoScriptArray($valueConfig);
+
+					if (array_key_exists('_typoScriptNodeValue', $valueConfig)) {
+						$value = $contentRenderer
+							->getContentObject($valueConfig['_typoScriptNodeValue'])
+							->render($config);
+					}
+					$value = trim($value, "\n");
+					return strval($value);
 			}
 		}
 		

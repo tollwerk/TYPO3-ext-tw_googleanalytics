@@ -1,0 +1,30 @@
+{
+  "name": "tollwerk/tw-googleanalytics",
+  "type": "typo3-cms-extension",
+  "description": "[TYPO3 CMS 7 LTS Release] Frontend plugin for advanced Google Analytics integration with a wide range of features including pageView and event tracking, custom variables, cross domain tracking, tracking of file downloads and external domains and much more. The extension is built on extbase / fluid and supports the asynchronous tracking code only (ga.js).",
+  "authors": [
+    {
+      "name": "Joschi Kuphal",
+      "email": "joschi@tollwerk.de"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://composer.typo3.org/"
+    }
+  ],
+  "require": {
+    "typo3/cms": "7.x"
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Tollwerk\\TwGoogleanalytics\\": "Classes/"
+    }
+  }
+}

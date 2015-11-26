@@ -15,7 +15,7 @@ A PDF-version of the documentation is available at the [Tollwerk website](http:/
 Requirements
 ------------
 
-**ATTENTION**: This is a **TYPO3 CMS 6** release. Support for TYPO3 4.x has been dropped, use the 1.x versions instead (still available in the [TYPO3 Extension Repository](http://typo3.org/extensions/repository/view/tw_googleanalytics)).
+**ATTENTION**: This is a **TYPO3 CMS 6/7** release. Support for TYPO3 4.x has been dropped, use the 1.x versions instead (still available in the [TYPO3 Extension Repository](http://typo3.org/extensions/repository/view/tw_googleanalytics)).
 
 
 Legal

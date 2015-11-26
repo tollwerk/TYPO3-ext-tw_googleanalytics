@@ -385,7 +385,7 @@ tw_gat.installTrackingHandlers = function(readyState) {
     	if (this._trackReady == 3) {
         
 	        // Click-Handler for links / submit handler for forms
-	        this._clickHandler          = function(e) { tw_gat.click(e); };
+	        this._clickHandler          = function(e) { return tw_gat.click(e); };
 	        var installFormHandlers     = function() {
 	            var submitHandler       = function(e) { return tw_gat.submit(e, this); };
 	            for (var f = 0, fl = document.forms.length; f < fl; ++f) {
@@ -803,7 +803,7 @@ tw_gat._doTrackURL = function(e, url, form) {
             if (this._crossDomains.length) {
                 for (var cd = 0, cdl = this._crossDomains.length; cd < cdl; ++cd) {
                     if (this._crossDomains[cd] == domain) {
-                        return form ? this.linkByPost(form) : this.link(url).cancel(e);
+                        return form ? this.linkByPost(form) : true;
                     }
                 }
             }

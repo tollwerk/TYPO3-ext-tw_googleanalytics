@@ -64,8 +64,8 @@ plugin.tx_twgoogleanalytics {
 	######################################################################################################
 	# PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
 	# ----------------------------------------------------------------------------------------------------
-	page.includeJS.googleanalytics		= EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics.min.js
-	page.includeJS.googleanalytics {
+	page.includeJSFooter.googleanalytics		= EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics.min.js
+	page.includeJSFooter.googleanalytics {
 		forceOnTop								= 1
 		disableCompression				= 1
 	}
@@ -93,8 +93,8 @@ plugin.tx_twgoogleanalytics {
 	######################################################################################################
 	# PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
 	# ----------------------------------------------------------------------------------------------------
-	page.includeJS.googleanalytics		= EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics_universal.min.js
-	page.includeJS.googleanalytics {
+	page.includeJSFooter.googleanalytics		= EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics_universal.min.js
+	page.includeJSFooter.googleanalytics {
 		forceOnTop								= 1
 		disableCompression				= 1
 	}

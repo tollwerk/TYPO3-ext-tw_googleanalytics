@@ -27,6 +27,8 @@ namespace Tollwerk\TwGoogleanalytics\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Service\TypoScriptService;
 
 /**
  * Google Analytics Tracker Controller
@@ -38,7 +40,7 @@ namespace Tollwerk\TwGoogleanalytics\Controller;
 class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 	/**
 	 * Minimum custom variable index
-	 * 
+	 *
 	 * @var int
 	 */
 	protected $_minIndex = 1;
@@ -50,7 +52,7 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 	protected $_maxIndex = 5;
 	/**
 	 * Levels / scopes
-	 * 
+	 *
 	 * @var array
 	 */
 	protected static $_levels = array(
@@ -72,30 +74,30 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 	const LEVEL_SESSION = 2;
 	/**
 	 * Page Level
-	 * 
+	 *
 	 * @var int
 	 */
 	const LEVEL_PAGE = 3;
 	/**
 	 * No domain name
-	 * 
+	 *
 	 * @var string
 	 */
 	const DOMAIN_NONE = 'none';
 	/**
 	 * Automatic domain name resolution
-	 * 
+	 *
 	 * @var string
 	 */
 	const DOMAIN_AUTO = 'auto';
-	
+
 	/************************************************************************************************
 	 * PUBLIC METHODS
 	***********************************************************************************************/
-	
+
 	/**
 	 * Inclusion of the tracking code
-	 * 
+	 *
 	 * @return void
 	 */
 	public function trackAction() {
@@ -103,7 +105,7 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 		foreach ($this->settings['features']['track'] as $feature => $enabled) {
 			$this->settings['features']['track'][$feature]	= intval((boolean)$enabled);
 		}
-		
+
 		// Crossdomain tracking
 		$this->settings['crossdomain']['sub']				= intval($this->settings['crossdomain']['sub']);
 		switch ($this->settings['crossdomain']['sub']) {
@@ -119,7 +121,7 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 				break;
 		}
 		$this->settings['crossdomain']['cross']				= $this->_getDomains($this->settings['crossdomain']['cross']);
-		
+
 		// Collecting custom variables (Google Analytics only)
 		$customVariables				= array();
 		foreach((array_key_exists('customVariables', $this->settings) ? (array)$this->settings['customVariables'] : array()) as $index => $variableKeyValue) {
@@ -141,9 +143,9 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 					$customVariable['value']				= substr($customVariable['value'], 0, 63 - strlen($customVariable['name']));
 					$customVariables[]						= array_values($customVariable);
 				}
-			} 
+			}
 		}
-		
+
 		// Collecting custom dimension & metrics (Universal Analytics only)
 		$customDimensions									=
 		$customMetrics										= array();
@@ -160,12 +162,12 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 				}
 			}
 		}
-		
+
 		$this->settings['external']['track']				= min(2, max(0, intval($this->settings['external']['track'])));
 		$this->settings['external']['prefix']				= $this->settings['external']['track'] ? trim($this->settings['external']['prefix']) : '';
 		$this->settings['external']['track']				= strlen($this->settings['external']['prefix']) ? $this->settings['external']['track'] : 0;
 		$this->settings['external']['restrict']				= json_encode($this->settings['external']['track'] ? $this->_getDomains($this->settings['external']['restrict']) : array());
-		
+
 		$this->settings['email']['track']					= min(2, max(0, intval($this->settings['email']['track'])));
 		$this->settings['email']['prefix']					= $this->settings['email']['track'] ? trim($this->settings['email']['prefix']) : '';
 		$this->settings['email']['track']					= strlen($this->settings['email']['prefix']) ? $this->settings['email']['track'] : 0;
@@ -195,10 +197,10 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 		}
 		$this->settings['download']['track']				= (strlen($this->settings['download']['prefix']) && count($this->settings['download']['list'])) ? $this->settings['download']['track'] : 0;
 		$this->settings['download']['list']					= json_encode($this->settings['download']['list']);
-		
-		$this->settings['direct']['keywords']				= json_encode(\TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', implode(',', preg_split("%[\,\;]+%", $this->settings['direct']['keywords'])), true));
-		$this->settings['direct']['referrers']				= json_encode(\TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', implode(',', preg_split("%[\,\;]+%", $this->settings['direct']['referrers'])), true));
-		
+
+		$this->settings['direct']['keywords']				= json_encode(GeneralUtility::trimExplode(',', implode(',', preg_split("%[\,\;]+%", $this->settings['direct']['keywords'])), true));
+		$this->settings['direct']['referrers']				= json_encode(GeneralUtility::trimExplode(',', implode(',', preg_split("%[\,\;]+%", $this->settings['direct']['referrers'])), true));
+
 		$searchEngines										= preg_split("%[\,\;]+%", $this->settings['searchengines']);
 		$this->settings['searchengines']					= array();
 		foreach ($searchEngines as $searchEngine) {
@@ -207,61 +209,63 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 			}
 		}
 		$this->settings['searchengines']					= json_encode($this->settings['searchengines']);
-		
+
 		$this->view->assign('customVariables', json_encode($customVariables));
 		$this->view->assign('customDimensionsMetrics', json_encode(array_merge($customDimensions, $customMetrics)));
 		$this->view->assign('pageUrl', $this->_getPageUrl(array_key_exists('pageUrl', $this->settings) ? $this->settings['pageUrl'] : null));
 		$this->view->assign('settings', $this->settings);
 	}
-	
+
 	/************************************************************************************************
 	 * PRIVATE METHODS
 	 ***********************************************************************************************/
-	
+
 	/**
 	 * Extracting the current page title
-	 * 
+	 *
 	 * @param string|array $pageUrlConfig			Page URL configuration
 	 * @return string								Page URL
 	 */
 	protected function _getPageUrl($pageUrlConfig) {
-		
+
 		// If a configuration array has been passed ...
 		if (is_array($pageUrlConfig) && array_key_exists('_typoScriptNodeValue', $pageUrlConfig)) {
-			
-			/* @var $cObj \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer */			
+      /** @var TypoScriptService $typoScriptService */
+      $typoScriptService = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Service\\TypoScriptService');
+
+			/* @var $cObj \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer */
 			$cObj						= $GLOBALS['TSFE']->cObj;
-			$pageUrl					= $cObj->cObjGetSingle($pageUrlConfig['_typoScriptNodeValue'], $pageUrlConfig);
+			$pageUrl					= $cObj->cObjGetSingle($pageUrlConfig['_typoScriptNodeValue'], $typoScriptService->convertPlainArrayToTypoScriptArray($pageUrlConfig));
 			return $pageUrl;
-			
-		// ... else if a literal page title has been passed ... 
+
+		// ... else if a literal page title has been passed ...
 		} elseif (strlen($pageUrlConfig = trim($pageUrlConfig))) {
 			return $pageUrlConfig;
-			
+
 		// ... else return current request URL
 		} else {
 			return $_SERVER['REQUEST_URI'];
 		}
 	}
-	
+
 	/**
 	 * Extraction of complex values
-	 * 
+	 *
 	 * @param array $valueConfig		Value configuration
 	 * @return string					Value
 	 */
 	protected function _getValue(array $valueConfig) {
 		$returnValue					= null;
-		
+
 		if (array_key_exists('_typoScriptNodeValue', $valueConfig)) {
 			$valueType					= strtolower($valueConfig['_typoScriptNodeValue']);
 			unset($valueConfig['_typoScriptNodeValue']);
-			
+
 			switch ($valueType) {
-				
+
 				// Value extraction based on a GET / POST variable
 				case 'gp':
-					
+
 					// Detect if a database lookup is required
 					if (array_key_exists('lookup', $valueConfig)) {
 						$lookup			= trim($valueConfig['lookup']);
@@ -269,7 +273,7 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 					} else {
 						$lookup			= null;
 					}
-					
+
 					// Extraction of the requested GET / POST variable
 					$gpVariables		= array();
 					$gpValues			= array();
@@ -282,10 +286,10 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 							}
 						}
 					}
-					
+
 					// If there exists a key 1 ...
 					if (array_key_exists(1, $gpVariables)) {
-						
+
 						foreach ($gpVariables as $index => $steps) {
 							$stack							= null;
 							foreach ($steps as $step) {
@@ -298,17 +302,17 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 								$gpValues[$index]			= $stack;
 							}
 						}
-						
+
 						// If all of the required values could be found ...
 						if (count($gpValues) == count($gpVariables)) {
-							
+
 							// If a database lookup has been requested ...
 							if (strlen($lookup)) {
 								foreach ($gpValues as $key => $value) {
 									$lookupTable			= $gpVariables[$key][0] ?: 'pages';
 									$lookup					= str_replace('$'.$key, $GLOBALS['TYPO3_DB']->quoteStr($value, $lookupTable), $lookup);
 								}
-								
+
 								$result						= $GLOBALS['TYPO3_DB']->sql_query($lookup);
 								if ($result && $GLOBALS['TYPO3_DB']->sql_num_rows($result)) {
 									$result					= $GLOBALS['TYPO3_DB']->sql_fetch_row($result);
@@ -316,7 +320,7 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 										$returnValue		= array_shift($result);
 									}
 								}
-								
+
 							// ... else return the first variabe value
 							} else {
 								$returnValue				= $gpValues[1];
@@ -326,13 +330,13 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 					break;
 			}
 		}
-		
+
 		return $returnValue;
 	}
-	
+
 	/**
-	 * Filter domain names out of a delimiter separated string (no domain name validation though) 
-	 * 
+	 * Filter domain names out of a delimiter separated string (no domain name validation though)
+	 *
 	 * @param string $str				Domain name string
 	 * @return array					Domain names
 	 */

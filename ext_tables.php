@@ -27,25 +27,24 @@
  ***************************************************************/
 
 if (!defined('TYPO3_MODE')) {
-	die ('Access denied.');
+    die ('Access denied.');
 }
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'tollwerk Google Analytics');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript',
+    'tollwerk Google Analytics');
 
 if (version_compare(TYPO3_version, '6.1.0', 'lt')) {
-	\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
+    \TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
 }
 
 $TCA['pages']['columns']['tx_twgoogleanalytics_no_tracking'] = array(
-	'label'			=> 'LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:pages.tx_twgoogleanalytics_no_tracking',
-	'config'		=> Array (
-		'type'		=> 'check',
-		'items'		=> array(
-			array('LLL:EXT:cms/locallang_tca.xml:pages.no_search_checkbox_1_formlabel', 1),
-		)
-	)
+    'label' => 'LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:pages.tx_twgoogleanalytics_no_tracking',
+    'config' => Array(
+        'type' => 'check',
+        'items' => array(
+            array('LLL:EXT:cms/locallang_tca.xml:pages.no_search_checkbox_1_formlabel', 1),
+        )
+    )
 );
 
 $GLOBALS['TCA']['pages']['palettes']['miscellaneous']['showitem'] .= ',tx_twgoogleanalytics_no_tracking';
-
-?>

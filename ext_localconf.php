@@ -27,14 +27,12 @@
  ***************************************************************/
 
 if (!defined('TYPO3_MODE')) {
-	die ('Access denied.');
+    die ('Access denied.');
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'Tollwerk.'.$_EXTKEY,
-	'Googleanalytics',
-	array('Googleanalytics' => 'track'),
-	array('Googleanalytics' => '')
+    'Tollwerk.'.$_EXTKEY,
+    'Googleanalytics',
+    array('Googleanalytics' => 'track'),
+    array('Googleanalytics' => '')
 );
-
-?>

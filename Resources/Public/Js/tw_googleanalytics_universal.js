@@ -1,6 +1,6 @@
 /**
  * Universal Analytics Tracker
- * 
+ *
  * Compatible with universial.js
  *
  * @package		tw_googleanalytics
@@ -20,121 +20,121 @@
 
 /**
  * Universal Analytics Tracker
- * 
- * @type {Object} 
+ *
+ * @type {Object}
  */
 var tw_gat = {
     /**
      * Custom Variables
-     * 
-     * @type {Array} 
+     *
+     * @type {Array}
      */
     '_customVariables': [null, null, null, null, null],
     /**
      * Currently active custom variables
-     * 
-     * @type {Array} 
+     *
+     * @type {Array}
      */
     '_activeCustomVariables': [false, false, false, false, false],
     /**
      * Google Analytics account ID
-     * 
-     * @type {String} 
+     *
+     * @type {String}
      */
     '_accountId': null,
     /**
      * Debug mode
-     * 
+     *
      * @type {Boolean}
      */
     '_debug': false,
     /**
      * Most recently tracked page URL
-     * 
-     * @type {String} 
+     *
+     * @type {String}
      */
     '_lastPageUrl': '',
     /**
      * Domain name
-     * 
+     *
      * @type {String}
      */
     '_domainName': 'auto',
     /**
      * Tracking of client info
-     * 
+     *
      * @type {Boolean}
      */
     '_clientInfo': true,
     /**
      * Tracking of flash version
-     * 
+     *
      * @type {Boolean}
      */
     '_flashVersion': true,
     /**
      * Tracking of page title
-     * 
+     *
      * @type {Boolean}
      */
     '_pageTitle': true,
     /**
      * Allow cross domain linking
-     * 
+     *
      * @type {Boolean}
      */
     '_linker': false,
     /**
      * Domains for cross domain tracking
-     * 
+     *
      * @type {Array}
      */
     '_crossDomains': [],
     /**
      * Click handler
-     * 
+     *
      * @type {Function}
      */
     '_clickHandler': null,
     /**
      * External URL tracking configuration
-     * 
+     *
      * @type {Object}
      */
     '_trackExternal': null,
     /**
      * E-Mail tracking configuration
-     * 
+     *
      * @type {Object}
      */
     '_trackEmail': null,
     /**
      * Download tracking configuration
-     * 
+     *
      * @type {Object}
      */
     '_trackDownload': null,
     /**
      * Tracking handler ready state
-     * 
+     *
      * @type {Number}
      */
     '_trackReady': 0,
     /**
      * IP address anonymization
-     * 
+     *
      * @type {Boolean}
      */
     '_anonymizeIP': false,
     /**
      * Remarketing and advertising reporting features
-     * 
+     *
      * @type {Boolean}
      */
     '_advertising': false,
     /**
      * Tracker has been created
-     * 
+     *
      * @type {Boolean}
      */
     '_created': false
@@ -142,7 +142,7 @@ var tw_gat = {
 
 /**
  * Check if the given argument is an Array (with a certain number of elements)
- * 
+ *
  * @param {Mixed} array                 Array argument
  * @param {Number} length               Optional: Expected number of elements
  * @return {Boolean}                    The argument is an array (with the expected number of elements)
@@ -154,7 +154,7 @@ tw_gat.isArray = function(array, length) {
 
 /**
  * Strip whitespaces off a string
- * 
+ *
  * @param {String} str                  String
  * @return {String} str                 Whitespace-stripped string
  */
@@ -166,11 +166,11 @@ tw_gat.trim = function(str) {
 
 /**
  * Activate / deactivate the debug mode
- * 
+ *
  * In debug mode the requests sent to Google Analytics are logged to the javascript console (if
  * available). By passing 2 as argument the "Debug only" mode is enabled so that no real tracking
- * takes place and any requests are just logged to the console.  
- * 
+ * takes place and any requests are just logged to the console.
+ *
  * @param {Number} debugMode            Activate debug mode (0 = Off, 1 = On, 2 = Debug only)
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -181,24 +181,24 @@ tw_gat.debug = function(debugMode) {
 
 /**
  * Registration of custom dimensions & metrics
- * 
+ *
  * Custom dimensions and metrics have to be registered at your Universal Analytics prior to submitting them.
  * You have to pass an object of custom dimensions and metrics to this method. The property names are used
  * as dimension / metric indices:
- * 
+ *
  * {
  * 		'dimension1': 'value 1',
  * 		'dimension2': 'value 2',
  * 		'metric1': 800,
  * 		'metric2': 29.50,
  * }
- * 
+ *
  * Once set, the custom dimensions will be submitted to Universal Analytics along with every pageview and
  * event submission.
- * 
+ *
  * For a full documentation:
  * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/custom-dims-mets
- * 
+ *
  * @param {Array} customDimensionsMetrics      Custom dimensions and metrics
  * @return {Object}                     		Self reference (liquid interface)
  */
@@ -219,7 +219,7 @@ tw_gat.registerCustomDimensionsMetrics = function(customDimensionsMetrics) {
 
 /**
  * Setting the Google Analytics account / web property ID
- * 
+ *
  * @param {String} accountId            Google Analytics account ID
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -236,7 +236,7 @@ tw_gat.setAccount = function(accountId) {
 
 /**
  * Set domain name
- * 
+ *
  * @param {Boolean} domainName          Domain name
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -250,7 +250,7 @@ tw_gat.setDomainName = function(domainName) {
 
 /**
  * One time creation of the tracker object
- * 
+ *
  * @return {Boolean}					Success
  */
 tw_gat._createTracker = function() {
@@ -266,7 +266,7 @@ tw_gat._createTracker = function() {
 		        ga('require', 'linker');
 		        ga('linker:autoLink', this._crossDomain);
 		    }
-		    
+
 		} else {
 			if (this._debug && console) {
 		        console.log('Universal Analytics', 'create', this._accountId);
@@ -294,7 +294,7 @@ tw_gat._createTracker = function() {
 
 /**
  * IP address anonymization
- * 
+ *
  * @param {Boolean} anonymizeIP         Anonymize IP address
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -307,7 +307,7 @@ tw_gat.anonymizeIP = function(anonymizeIP) {
 
 /**
  * Enable remarketing and advertising reporting features
- * 
+ *
  * @param {Boolean} advertising         Remarketing and advertising reporting features
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -320,7 +320,7 @@ tw_gat.enableAdvertising = function(advertising) {
 
 /**
  * Track client info
- * 
+ *
  * @param {Boolean} clientInfo          Track client info
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -331,7 +331,7 @@ tw_gat.trackClientInfo = function(clientInfo) {
 
 /**
  * Track flash version
- * 
+ *
  * @param {Boolean} flashVersion        Track flash version
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -342,7 +342,7 @@ tw_gat.trackFlashVersion = function(flashVersion) {
 
 /**
  * Track page title
- * 
+ *
  * @param {Boolean} pageTitle           Track page title
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -353,7 +353,7 @@ tw_gat.trackPageTitle = function(pageTitle) {
 
 /**
  * Registering of (top level) domains to be tracked across
- * 
+ *
  * @param {Array} crossDomains          Domains
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -375,7 +375,7 @@ tw_gat.setCrossDomains = function(crossDomains) {
 
 /**
  * Activate the click & submit handlers for crossdomain and / or download tracking
- * 
+ *
  * @param {Number} readyState			Tracking handler ready state
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -383,7 +383,7 @@ tw_gat.installTrackingHandlers = function(readyState) {
     if (this._accountId && !this._clickHandler) {
     	this._trackReady				|= readyState;
     	if (this._trackReady == 3) {
-        
+
 	        // Click-Handler for links / submit handler for forms
 	        this._clickHandler          = function(e) { return tw_gat.click(e); };
 	        var installFormHandlers     = function() {
@@ -396,7 +396,7 @@ tw_gat.installTrackingHandlers = function(readyState) {
 	                }
 	            }
 	        }
-	        
+
 	        if (window.addEventListener){
 	            document.addEventListener('click', this._clickHandler, false);
 	            window.addEventListener('load', installFormHandlers, false)
@@ -410,7 +410,7 @@ tw_gat.installTrackingHandlers = function(readyState) {
 
 /**
  * Click handler for crossdomain and / or download tracking
- * 
+ *
  * @return {Boolean}                    Go on with regular event processing
  */
 tw_gat.click = function(e) {
@@ -427,13 +427,13 @@ tw_gat.click = function(e) {
             }
         }
         var url             = elem.getAttribute('href') || '',
-        lcUrl               = url.toLowerCase(); 
+        lcUrl               = url.toLowerCase();
         if (url && url.length) {
-            
+
             // E-Mail link
             if (lcUrl.indexOf('mailto:') === 0) {
                 this._doTrackEmail('Click', url.split(':')[1].split('?').shift());
-                
+
             // Regular URL
             } else {
                 return this._doTrackURL(e, url, null);
@@ -445,7 +445,7 @@ tw_gat.click = function(e) {
 
 /**
  * Submit handler for crossdomain and / or download tracking
- * 
+ *
  * @param {Event} e                     Event
  * @param {Element} form                Form element
  * @return {Boolean}                    Go on with regular event processing
@@ -453,26 +453,26 @@ tw_gat.click = function(e) {
 tw_gat.submit = function(e, form) {
     if (this._accountId) {
         var url             = form.action || document.location.href,
-        lcUrl               = url.toLowerCase(); 
+        lcUrl               = url.toLowerCase();
         if (url && url.length) {
-            
+
             // E-Mail link
             if (lcUrl.indexOf('mailto:') === 0) {
                 this._doTrackEmail('Post', url.split(':')[1].split('?').shift());
-                
+
             // Regular URL
             } else {
                 this._doTrackURL(e, url, form);
             }
         }
     }
-    
+
     return true;
 }
 
 /**
  * Cancel an event
- * 
+ *
  * @return {Boolean}                    Always FALSE
  */
 tw_gat.cancel = function(e) {
@@ -489,7 +489,7 @@ tw_gat.cancel = function(e) {
 
 /**
  * Crossdomain linking to an URL
- * 
+ *
  * @param {String} url                  URL
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -500,7 +500,7 @@ tw_gat.link = function(url) {
 
 /**
  * Crossdomain linking to an URL by POST
- * 
+ *
  * @param {Element} form                Form element
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -511,7 +511,7 @@ tw_gat.linkByPost = function(form) {
 
 /**
  * Track external URLs
- * 
+ *
  * @param {Number} mode                 Tracking mode (0 = off, 1 = as pageViews, 2 = as events)
  * @param {String} prefix               Tracking prefix
  * @param {Array} restrict              Restrict to domains
@@ -526,7 +526,7 @@ tw_gat.trackExternals = function(mode, prefix, restrict) {
             }
             this.installTrackingHandlers(1);
         } else {
-            this._trackExternal = null; 
+            this._trackExternal = null;
         }
     }
     return this;
@@ -534,7 +534,7 @@ tw_gat.trackExternals = function(mode, prefix, restrict) {
 
 /**
  * Track E-Mail addresses
- * 
+ *
  * @param {Number} mode                 Tracking mode (0 = off, 1 = as pageViews, 2 = as events)
  * @param {String} prefix               Tracking prefix
  * @param {Array} restrict              Restrict to addresses
@@ -549,7 +549,7 @@ tw_gat.trackEmails = function(mode, prefix, restrict) {
             }
             this.installTrackingHandlers(1);
         } else {
-            this._trackEmail    = null; 
+            this._trackEmail    = null;
         }
     }
     return this;
@@ -557,7 +557,7 @@ tw_gat.trackEmails = function(mode, prefix, restrict) {
 
 /**
  * Track downloads
- * 
+ *
  * @param {Number} mode                 Tracking mode (0 = off, 1 = as pageViews, 2 = as events)
  * @param {String} prefix               Tracking prefix
  * @param {String} template				Tracking template string
@@ -608,7 +608,7 @@ tw_gat.trackDownloads = function(mode, prefix, template, list) {
 
 /**
  * Tracking a page view
- * 
+ *
  * @param {String} pageUrl              Optional: Document URL
  * @return {Object}                     Self reference (liquid interface)
  */
@@ -628,10 +628,10 @@ tw_gat.trackPageview = function(pageUrl) {
 
 /**
  * Tracking an event
- * 
+ *
  * For a detailed explanation of the available arguments please
  * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/events
- * 
+ *
  * @param {String} category             Event category
  * @param {String} action               Event action
  * @param {String} label                Optional: Event label
@@ -664,7 +664,7 @@ tw_gat.trackEvent = function(category, action, label, value) {
 
 /**
  * Social interaction tracking
- * 
+ *
  * @param {String} network              Social network name (e.g. Facebook, Twitter, LinkedIn)
  * @param {String} action               Social action (e.g. Like, Share, Tweet)
  * @param {String} target               Optional interaction target (e.g. an ID or the page title, which is the default if omitted)
@@ -692,7 +692,7 @@ tw_gat.trackSocial = function(network, action, target) {
 
 /**
  * Track an email link click
- * 
+ *
  * @param {String} action               Event action
  * @param {String} email                E-mail address
  * @return {Object}                     Self reference (liquid interface)
@@ -727,7 +727,7 @@ tw_gat._doTrackEmail = function(action, email) {
 
 /**
  * Track an URL link click
- * 
+ *
  * @param {Event} e                     Click event
  * @param {String} url                  URL
  * @param {Element} Form                Form element
@@ -739,7 +739,7 @@ tw_gat._doTrackURL = function(e, url, form) {
         regex                       = new RegExp('^(?:f|ht)tp(?:s)?\://(?:[^\@]\@)?([^:/]+)', 'im'),
         match                       = url.match(regex),
         domain                      = ((match ? match[1].toString() : ((url.indexOf(':') < 0) ? host : ''))).toLowerCase();
-        
+
         // Same domain
         if (domain == host) {
             if (this._trackDownload && (this._trackDownload.mode > 0) && (this._trackDownload.list !== null)) {
@@ -762,7 +762,7 @@ tw_gat._doTrackURL = function(e, url, form) {
                             for (var e = 0, el = ext.length; e < el; ++e) {
                                 if (ext[e] == fileExt) {
                                     trackDownload   = true;
-                                    break;                                  
+                                    break;
                                 }
                             }
                         }
@@ -795,10 +795,10 @@ tw_gat._doTrackURL = function(e, url, form) {
                     }
                 }
             }
-            
+
         // External domain
         } else {
-            
+
             // Crossdomain tracking
             if (this._crossDomains.length) {
                 for (var cd = 0, cdl = this._crossDomains.length; cd < cdl; ++cd) {
@@ -807,7 +807,7 @@ tw_gat._doTrackURL = function(e, url, form) {
                     }
                 }
             }
-            
+
             // External URL tracking
             if (this._trackExternal && (this._trackExternal.mode > 0)) {
                 var trackUrl            = url,
@@ -839,7 +839,7 @@ tw_gat._doTrackURL = function(e, url, form) {
 
 /**
  * Opt-out of tracking by setting an opt-out cookie
- * 
+ *
  * @var {Boolean} out					Opt-out
  * @return {Object}                     Self reference (liquid interface)
  */

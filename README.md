@@ -1,7 +1,7 @@
 TYPO3 extension tw_googleanalytics
 ==================================
 
-Frontend plugin for advanced Google Analytics integration with a wide range of features including pageView and event tracking, custom variables, cross domain tracking, tracking of file downloads and external domains and much more. The extension is built on extbase / fluid and supports the asynchronous tracking code only (ga.js).
+Frontend plugin for advanced Google / Universal Analytics integration with a wide range of features including pageView and event tracking, custom variables, cross domain tracking, tracking of file downloads and external domains and much more.
 
 
 Documentation
@@ -15,12 +15,12 @@ A PDF-version of the documentation is available at the [Tollwerk website](http:/
 Requirements
 ------------
 
-**ATTENTION**: This is a **TYPO3 CMS 6/7** release. Support for TYPO3 4.x has been dropped, use the 1.x versions instead (still available in the [TYPO3 Extension Repository](http://typo3.org/extensions/repository/view/tw_googleanalytics)).
+**ATTENTION**: This is a **TYPO3 CMS 7+** release. Support for TYPO3 4.x has been dropped, use the 1.x versions instead (still available in the [TYPO3 Extension Repository](http://typo3.org/extensions/repository/view/tw_googleanalytics)).
 
 
 Legal
 -----
 
-Copyright © 2015 Joschi Kuphal joschi@kuphal.net / @jkphl
+Copyright © 2016 Joschi Kuphal <joschi@kuphal.net> / [@jkphl](https://twitter.com/jkphl)
 
 Licensed under the terms of the [GPL v2](LICENSE.txt) license.

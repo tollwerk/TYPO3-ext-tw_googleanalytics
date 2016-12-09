@@ -73,7 +73,7 @@ plugin.tx_twgoogleanalytics {
     ######################################################################################################
     # PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
     # ----------------------------------------------------------------------------------------------------
-    page.includeJSFooter.googleanalytics = EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics.min.js
+    page.includeJSFooter.googleanalytics = EXT:tw_googleanalytics/Resources/Public/Js/_tw_googleanalytics.min.js
     page.includeJSFooter.googleanalytics {
         forceOnTop = 1
         disableCompression = 1

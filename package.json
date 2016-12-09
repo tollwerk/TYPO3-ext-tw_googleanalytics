@@ -1,0 +1,34 @@
+{
+  "name": "tw_googleanalytics",
+  "version": "3.0.2",
+  "description": "TYPO3 frontend plugin for advanced Google Analytics integration with a wide range of features. Created by Joschi Kuphal (@jkphl), licensed under the terms of the GPL v2 license.",
+  "main": "ext_emconf.php",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tollwerk/TYPO3-ext-tw_googleanalytics.git"
+  },
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "Google",
+    "Analytics"
+  ],
+  "author": "Joschi Kuphal <joschi@tollwerk.de>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tollwerk/TYPO3-ext-tw_googleanalytics/issues"
+  },
+  "homepage": "https://github.com/tollwerk/TYPO3-ext-tw_googleanalytics#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11"
+  }
+}

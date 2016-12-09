@@ -25,18 +25,6 @@
  */
 var tw_gat = {
     /**
-     * Custom Variables
-     *
-     * @type {Array}
-     */
-    '_customVariables': [null, null, null, null, null],
-    /**
-     * Currently active custom variables
-     *
-     * @type {Array}
-     */
-    '_activeCustomVariables': [false, false, false, false, false],
-    /**
      * Google Analytics account ID
      *
      * @type {String}

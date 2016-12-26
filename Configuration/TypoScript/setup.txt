@@ -51,6 +51,14 @@ plugin.tx_twgoogleanalytics {
         }
 
         searchengines = {$plugin.tx_twgoogleanalytics.settings.searchengines}
+
+        linkid {
+            enable = {$plugin.tx_twgoogleanalytics.settings.linkid.enable}
+            cookie = {$plugin.tx_twgoogleanalytics.settings.linkid.cookie}
+            duration = {$plugin.tx_twgoogleanalytics.settings.linkid.duration}
+            levels = {$plugin.tx_twgoogleanalytics.settings.linkid.levels}
+        }
+
         customVariables {
 
         }

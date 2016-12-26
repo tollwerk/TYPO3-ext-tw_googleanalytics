@@ -30,6 +30,9 @@
 			<trans-unit id="file" xml:space="preserve">
 				<source>Files &amp; directories</source>
 			</trans-unit>
+			<trans-unit id="linkid" xml:space="preserve">
+				<source>Enhanced link attribution</source>
+			</trans-unit>
 			<trans-unit id="file.templateRootPath" xml:space="preserve">
 				<source>Path to template root (FE):You can alter this in case you want to customize the tracking code output</source>
 			</trans-unit>
@@ -110,6 +113,18 @@
 			</trans-unit>
 			<trans-unit id="searchengines.searchengines" xml:space="preserve">
 				<source>Search engine traffic sources:Enter a comma separated list of search engine / keyword name definitions that should be considered as search engine traffic sources (e.g. &quot;MySpecialSearchEngine=query, AnotherSE=search&quot;). If you want a search engine to be prepended to the list of known traffic sources, append an exclamation mark to the definition (e.g. &quot;MostImportantSearchEngine=q!&quot;)</source>
+			</trans-unit>
+			<trans-unit id="linkid.enable" xml:space="preserve">
+				<source>Use enhanced link attribution</source>
+			</trans-unit>
+			<trans-unit id="linkid.cookie" xml:space="preserve">
+				<source>Link attribution cookie name</source>
+			</trans-unit>
+			<trans-unit id="linkid.duration" xml:space="preserve">
+				<source>Link attribution cookie lifetime in seconds</source>
+			</trans-unit>
+			<trans-unit id="linkid.levels" xml:space="preserve">
+				<source>Max. parent levels to look for a unique ID</source>
 			</trans-unit>
 		</body>
 	</file>

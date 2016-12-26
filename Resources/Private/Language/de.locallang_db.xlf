@@ -30,6 +30,9 @@
 			<trans-unit id="file" xml:space="preserve" approved="yes">
 				<source>Files &amp; directories</source>
 			<target state="translated">Dateien &amp; Verzeichnisse</target></trans-unit>
+			<trans-unit id="linkid" xml:space="preserve" approved="yes">
+				<source>Enhanced link attribution</source>
+			<target state="translated">Erweiterte Verknüpfungen</target></trans-unit>
 			<trans-unit id="file.templateRootPath" xml:space="preserve" approved="yes">
 				<source>Path to template root (FE):You can alter this in case you want to customize the tracking code output</source>
 			<target state="translated">Pfad zum Template-Verzeichnis (FE):Wählen Sie ein benutzerdefiniertes Template-Verzeichnis, wenn sie den Tracking-Code anpassen möchten</target></trans-unit>
@@ -111,6 +114,18 @@
 			<trans-unit id="searchengines.searchengines" xml:space="preserve" approved="yes">
 				<source>Search engine traffic sources:Enter a comma separated list of search engine / keyword name definitions that should be considered as search engine traffic sources (e.g. "MySpecialSearchEngine=query, AnotherSE=search"). If you want a search engine to be prepended to the list of known traffic sources, append an exclamation mark to the definition (e.g. "MostImportantSearchEngine=q!")</source>
 			<target state="translated">Suchmaschinen-Erkennungsmuster: Geben Sie hier eine kommaseparierte Liste von Suchmaschinen-Erkennungsmustern an. Ein Erkennungsmuster ist die Kombination aus Suchmaschinenname und GET-Parametername, der für die Suchbegriffe verwendet wird (z.B. "MeineSpezialSuchmaschine=query, NochEineSM=search"). Wenn Sie ein Erkennungsmuster an den Beginn der internen Erkennungsliste setzen und damit priorisieren möchten, schließen Sie das Erkennungsmuster mit einem Ausrufezeichen ab (z.B. "AllerWichtigsteSuchmaschine=q!")</target></trans-unit>
+			<trans-unit id="linkid.enable" xml:space="preserve" approved="yes">
+				<source>Use enhanced link attribution</source>
+			<target state="translated">Erweiterte Erfassung von Verknüpfungen nutzen</target></trans-unit>
+			<trans-unit id="linkid.cookie" xml:space="preserve" approved="yes">
+				<source>Link attribution cookie name</source>
+			<target state="translated">Name des Verknüpfungs-Cookies</target></trans-unit>
+			<trans-unit id="linkid.duration" xml:space="preserve" approved="yes">
+				<source>Link attribution cookie lifetime in seconds</source>
+			<target state="translated">Lebensdauer des Verknüpfungs-Cookies</target></trans-unit>
+			<trans-unit id="linkid.levels" xml:space="preserve" approved="yes">
+				<source>Max. parent levels to look for a unique ID</source>
+			<target state="translated">Max. Ebenen zur Suche nach einer eindeutigen ID</target></trans-unit>
 		</body>
 	</file>
 </xliff>

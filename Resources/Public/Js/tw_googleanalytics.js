@@ -866,6 +866,19 @@ tw_gat.trackSocial = function(network, action, target, pagePath) {
     return this;
 }
 
+
+/**
+ * Enable enhanced link attribution (not available in Google Analytics)
+ *
+ * @param {String} cookie                  Link attribution cookie name
+ * @param {Number} duration                Link attribution cookie lifetime in seconds
+ * @param {Number} levels                  Parent levels to look for a unique ID
+ * @returns {tw_gat}                       Self reference (liquid interface)
+ */
+tw_gat.trackLinkid = function (cookie, duration, levels) {
+    return this;
+}
+
 /**
  * Track an email link click
  *

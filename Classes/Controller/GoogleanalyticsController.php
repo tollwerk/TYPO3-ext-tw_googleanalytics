@@ -228,6 +228,11 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
         }
         $this->settings['searchengines'] = json_encode($this->settings['searchengines']);
 
+        $this->settings['linkid']['enable'] = intval($this->settings['linkid']['enable']);
+        $this->settings['linkid']['cookie'] = trim($this->settings['linkid']['cookie']);
+        $this->settings['linkid']['duration'] = max(0, intval($this->settings['linkid']['duration']));
+        $this->settings['linkid']['levels'] = max(0, intval($this->settings['linkid']['levels']));
+
         $this->view->assign('customVariables', json_encode($customVariables));
         $this->view->assign('customDimensionsMetrics', json_encode(array_merge($customDimensions, $customMetrics)));
         $this->view->assign('pageUrl',

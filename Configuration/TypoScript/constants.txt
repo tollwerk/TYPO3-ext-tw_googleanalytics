@@ -6,6 +6,7 @@
 # customsubcategory=direct=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:direct
 # customsubcategory=searchengines=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:searchengines
 # customsubcategory=file=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:file
+# customsubcategory=linkid=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:linkid
 
 plugin.tx_twgoogleanalytics {
 	view {
@@ -71,5 +72,14 @@ plugin.tx_twgoogleanalytics {
 
 		# cat=plugin.tx_twgoogleanalytics/searchengines/a; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:searchengines.searchengines
 		searchengines =
+
+		# cat=plugin.tx_twgoogleanalytics/linkid/a; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:linkid.enable
+		linkid.enable =
+		# cat=plugin.tx_twgoogleanalytics/linkid/b; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:linkid.cookie
+		linkid.cookie = _gali
+		# cat=plugin.tx_twgoogleanalytics/linkid/c; type=int+; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:linkid.duration
+		linkid.duration = 30
+		# cat=plugin.tx_twgoogleanalytics/linkid/d; type=int+; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:linkid.levels
+		linkid.levels = 3
 	}
 }

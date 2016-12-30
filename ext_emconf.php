@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "tw_googleanalytics".
 #
-# Auto generated 05-12-2014 13:21
+# Auto generated 30-12-2016 19:13
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next

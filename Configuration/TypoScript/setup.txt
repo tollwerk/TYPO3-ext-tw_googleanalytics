@@ -59,6 +59,8 @@ plugin.tx_twgoogleanalytics {
             levels = {$plugin.tx_twgoogleanalytics.settings.linkid.levels}
         }
 
+        user =
+
         customVariables {
 
         }

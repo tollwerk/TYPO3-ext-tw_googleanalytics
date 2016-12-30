@@ -1,7 +1,8 @@
 <f:if condition="{settings.wpid}"><script type="text/javascript"><![CDATA[
 if (typeof(tw_gat) == 'object') {
 	tw_gat.debug(]]>{settings.debug}<![CDATA[)
-		.setAccount(']]>{settings.wpid}<![CDATA[')
+		.setAccount(']]>{settings.wpid}<f:if condition="{settings.user}"><![CDATA[')
+		.setUserName(']]>{settings.user}</f:if><![CDATA[')
 		.setDomainName(']]>{settings.crossdomain.main}<![CDATA[')
 		.setCrossDomains([]]><f:for each="{settings.crossdomain.cross}" as="domain" iteration="iter"><f:if condition="{iter.index}">,</f:if>'{domain}'</f:for><![CDATA[])
 		.enableAdvertising(]]>{settings.features.advertising}<![CDATA[)

@@ -43,6 +43,12 @@ var tw_gat = {
      */
     '_lastPageUrl': '',
     /**
+     * User name
+     *
+     * @type {String}
+     */
+    '_userName': null,
+    /**
      * Domain name
      *
      * @type {String}
@@ -223,9 +229,23 @@ tw_gat.setAccount = function (accountId) {
 }
 
 /**
+ * Set user name
+ *
+ * @param {Boolean} userName            User name
+ * @return {Object}                     Self reference (liquid interface)
+ */
+tw_gat.setUserName = function (userName) {
+    userName = this.trim(userName);
+    if (userName.length && (userName != this._userName)) {
+        this._userName = userName;
+    }
+    return this;
+}
+
+/**
  * Set domain name
  *
- * @param {Boolean} domainName          Domain name
+ * @param {String} domainName           Domain name
  * @return {Object}                     Self reference (liquid interface)
  */
 tw_gat.setDomainName = function (domainName) {
@@ -243,24 +263,29 @@ tw_gat.setDomainName = function (domainName) {
  */
 tw_gat._createTracker = function () {
     if (!this._created && this._accountId) {
+        var fields = { trackingId: this._accountId };
+        if (this._userName) {
+            fields.userId = this._userName;
+        }
         if (this._linker) {
+            fields.allowLinker = true;
             if (this._debug && console) {
-                console.log('Universal Analytics', 'create', this._accountId, {'allowLinker': true});
+                console.log('Universal Analytics', 'create', fields);
                 console.log('Universal Analytics', 'require', 'linker');
                 console.log('Universal Analytics', 'linker:autoLink', this._crossDomains);
             }
             if (this._debug < 2) {
-                ga('create', this._accountId, {'allowLinker': true});
+                ga('create', fields);
                 ga('require', 'linker');
                 ga('linker:autoLink', this._crossDomain);
             }
 
         } else {
             if (this._debug && console) {
-                console.log('Universal Analytics', 'create', this._accountId);
+                console.log('Universal Analytics', 'create', fields);
             }
             if (this._debug < 2) {
-                ga('create', this._accountId);
+                ga('create', fields);
             }
         }
         if (this._advertising) {
@@ -512,7 +537,7 @@ tw_gat.linkByPost = function (form) {
 tw_gat.trackExternals = function (mode, prefix, restrict) {
     if (this._accountId) {
         if (mode) {
-            this._trackExternal = {'mode': mode, 'prefix': this.trim(prefix), 'restrict': []};
+            this._trackExternal = { 'mode': mode, 'prefix': this.trim(prefix), 'restrict': [] };
             for (var d = 0, domains = restrict || [], dl = domains.length; d < dl; ++d) {
                 this._trackExternal.restrict.push(domains[d].toLowerCase());
             }
@@ -535,7 +560,7 @@ tw_gat.trackExternals = function (mode, prefix, restrict) {
 tw_gat.trackEmails = function (mode, prefix, restrict) {
     if (this._accountId) {
         if (mode) {
-            this._trackEmail = {'mode': mode, 'prefix': this.trim(prefix), 'restrict': []};
+            this._trackEmail = { 'mode': mode, 'prefix': this.trim(prefix), 'restrict': [] };
             for (var e = 0, emails = restrict || [], el = emails.length; e < el; ++e) {
                 this._trackEmail.restrict.push(emails[e].toLowerCase());
             }
@@ -640,7 +665,7 @@ tw_gat.trackEvent = function (category, action, label, value) {
         category = (category ? this.trim(category) : '') || '';
         action = (action ? this.trim(action) : '') || '';
         if (category.length && action.length) {
-            var evt = {'eventCategory': category, 'eventAction': action};
+            var evt = { 'eventCategory': category, 'eventAction': action };
             if (arguments.length > 2) {
                 evt.eventLabel = (label ? this.trim(label) : '') || '';
                 if (arguments.length > 3) {
@@ -672,7 +697,7 @@ tw_gat.trackSocial = function (network, action, target) {
         network = (network ? this.trim(network) : '') || '';
         action = (action ? this.trim(action) : '') || '';
         if (network.length && action.length) {
-            var evt = {'socialNetwork': network, 'socialAction': action};
+            var evt = { 'socialNetwork': network, 'socialAction': action };
             if (arguments.length > 2) {
                 evt.socialTarget = (target ? this.trim(target) : '') || '';
             }
@@ -703,7 +728,7 @@ tw_gat.trackLinkid = function (cookie, duration, levels) {
         levels = parseInt(levels || 0);
         levels = isNaN(levels) ? 3 : Math.max(0, duration);
         if (cookie.length) {
-            var linkid = {'cookieName': cookie, 'duration': duration, 'levels': levels};
+            var linkid = { 'cookieName': cookie, 'duration': duration, 'levels': levels };
             if (this._debug && console) {
                 console.log('Universal Analytics', 'require', 'linkid', linkid);
             }

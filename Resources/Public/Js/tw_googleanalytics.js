@@ -278,9 +278,19 @@ tw_gat.setAccount = function(accountId) {
 }
 
 /**
+ * Set user name (not available in Google Analytics)
+ *
+ * @param {String} userName             User name
+ * @return {Object}                     Self reference (liquid interface)
+ */
+tw_gat.setUserName = function(userName) {
+    return this;
+}
+
+/**
  * Set domain name
  *
- * @param {Boolean} domainName          Domain name
+ * @param {String} domainName           Domain name
  * @return {Object}                     Self reference (liquid interface)
  */
 tw_gat.setDomainName = function(domainName) {

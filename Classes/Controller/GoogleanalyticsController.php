@@ -233,10 +233,13 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
         $this->settings['linkid']['duration'] = max(0, intval($this->settings['linkid']['duration']));
         $this->settings['linkid']['levels'] = max(0, intval($this->settings['linkid']['levels']));
 
+        $user = trim($this->_getTypoScriptValue($this->settings['user']));
+
         $this->view->assign('customVariables', json_encode($customVariables));
         $this->view->assign('customDimensionsMetrics', json_encode(array_merge($customDimensions, $customMetrics)));
         $this->view->assign('pageUrl',
             $this->_getPageUrl(array_key_exists('pageUrl', $this->settings) ? $this->settings['pageUrl'] : null));
+        $this->view->assign('user', strlen($user) ? $user : null);
         $this->view->assign('settings', $this->settings);
     }
 
@@ -252,26 +255,34 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
      */
     protected function _getPageUrl($pageUrlConfig)
     {
+        return $this->_getTypoScriptValue($pageUrlConfig, $_SERVER['REQUEST_URI']);
+    }
 
+    /**
+     * Extract a TypoScript value (if available)
+     *
+     * @param mixed $value Value
+     * @param mixed $default Default value
+     * @return string|null Value
+     */
+    protected function _getTypoScriptValue($value, $default = null)
+    {
         // If a configuration array has been passed ...
-        if (is_array($pageUrlConfig) && array_key_exists('_typoScriptNodeValue', $pageUrlConfig)) {
+        if (is_array($value) && array_key_exists('_typoScriptNodeValue', $value)) {
             /** @var TypoScriptService $typoScriptService */
             $typoScriptService = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Service\\TypoScriptService');
 
             /* @var $cObj \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer */
             $cObj = $GLOBALS['TSFE']->cObj;
-            $pageUrl = $cObj->cObjGetSingle($pageUrlConfig['_typoScriptNodeValue'],
-                $typoScriptService->convertPlainArrayToTypoScriptArray($pageUrlConfig));
-            return $pageUrl;
+            return $cObj->cObjGetSingle($value['_typoScriptNodeValue'],
+                $typoScriptService->convertPlainArrayToTypoScriptArray($value));
 
             // ... else if a literal page title has been passed ...
-        } elseif (strlen($pageUrlConfig = trim($pageUrlConfig))) {
-            return $pageUrlConfig;
-
-            // ... else return current request URL
-        } else {
-            return $_SERVER['REQUEST_URI'];
+        } elseif (strlen($value = trim($value))) {
+            return $value;
         }
+
+        return $default;
     }
 
     /**

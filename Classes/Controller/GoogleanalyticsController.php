@@ -157,6 +157,11 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
             $this->settings) ? (array)$this->settings['customDimensions'] : array()) as $dimension => $value) {
             if (preg_match("%^dimension\d+$%", $dimension)) {
                 $customDimensions[$dimension] = is_array($value) ? $this->_getValue($value) : strval($value);
+                if ($this->settings['removeEmptyCustomDimensions'] == 1) {
+                    if (!strlen($customDimensions[$dimension])) {
+                        unset($customDimensions[$dimension]);
+                    }
+                }
             }
         }
         foreach ((array_key_exists('customMetrics',
@@ -297,12 +302,12 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 
         if (array_key_exists('_typoScriptNodeValue', $valueConfig)) {
             $valueType = strtolower($valueConfig['_typoScriptNodeValue']);
-            unset($valueConfig['_typoScriptNodeValue']);
 
             switch ($valueType) {
 
                 // Value extraction based on a GET / POST variable
                 case 'gp':
+                    unset($valueConfig['_typoScriptNodeValue']);
 
                     // Detect if a database lookup is required
                     if (array_key_exists('lookup', $valueConfig)) {
@@ -368,6 +373,10 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
                         }
                     }
                     break;
+
+                // Treat this as a TypoScript content object
+                default:
+                    $returnValue = $this->_getTypoScriptValue($valueConfig);
             }
         }
 

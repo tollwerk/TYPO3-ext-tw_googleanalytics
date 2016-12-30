@@ -68,6 +68,7 @@ plugin.tx_twgoogleanalytics {
         customDimensions {
 
         }
+        removeEmptyCustomDimensions = {$plugin.tx_twgoogleanalytics.settings.removeEmptyCustomDimensions}
 
         customMetrics {
 

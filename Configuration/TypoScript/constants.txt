@@ -29,11 +29,13 @@ plugin.tx_twgoogleanalytics {
 
 		# cat=plugin.tx_twgoogleanalytics/features/a; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.anonymizeIP
 		anonymizeIP = 1
-		# cat=plugin.tx_twgoogleanalytics/features/b; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.title
+		# cat=plugin.tx_twgoogleanalytics/features/b; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.removeEmptyCustomDimensions
+		removeEmptyCustomDimensions = 1
+		# cat=plugin.tx_twgoogleanalytics/features/c; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.title
 		track.title = 1
-		# cat=plugin.tx_twgoogleanalytics/features/c; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.client
+		# cat=plugin.tx_twgoogleanalytics/features/d; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.client
 		track.client = 1
-		# cat=plugin.tx_twgoogleanalytics/features/d; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.flash
+		# cat=plugin.tx_twgoogleanalytics/features/e; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:features.track.flash
 		track.flash = 1
 
 		# cat=plugin.tx_twgoogleanalytics/crossdomain/a; type=options[None=0,Auto=1,Manual=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:crossdomain.domain.sub

@@ -57,6 +57,9 @@
 			<trans-unit id="features.anonymizeIP" xml:space="preserve" approved="yes">
 				<source>Anonymize IP address:Activate this feature for anonymizing your visiors' IP addresses (e.g. required by german law)</source>
 			<target state="translated">IP-Adresse anonymisieren:Aktivieren Sie diese Option, um die IP-Adresse Ihrer Besucher zu anonymisieren (bspw. erforderlich nach deutscher Rechtslage)</target></trans-unit>
+			<trans-unit id="features.removeEmptyCustomDimensions" xml:space="preserve" approved="yes">
+				<source>Remove empty custom dimensions</source>
+			<target state="translated">Leere benutzerdefinierte Dimensionen entfernen</target></trans-unit>
 			<trans-unit id="features.track.title" xml:space="preserve" approved="yes">
 				<source>Track page title:You might want to disable this feature if you have no specified or very long and cryptic page titles</source>
 			<target state="translated">Seitentitel erfassen:Sie können diese Option deaktivieren, wenn Sie bspw. keine oder sehr lange, kryptische Seitentitel verwenden, die Sie in der Google Analytics-Ansicht stören würden</target></trans-unit>

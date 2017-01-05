@@ -5,7 +5,7 @@ namespace Tollwerk\TwGoogleanalytics\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  Copyright © 2015 Dipl.-Ing. Joschi Kuphal (joschi@tollwerk.de)
+ *  Copyright © 2017 Dipl.-Ing. Joschi Kuphal (joschi@tollwerk.de)
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -35,7 +35,7 @@ use TYPO3\CMS\Extbase\Service\TypoScriptService;
  * Google Analytics Tracker Controller
  *
  * @package        tw_googleanalytics
- * @copyright    Copyright © 2015 tollwerk® GmbH (http://tollwerk.de)
+ * @copyright    Copyright © 2017 tollwerk® GmbH (http://tollwerk.de)
  * @author        Dipl.-Ing. Joschi Kuphal <joschi@tollwerk.de>
  */
 class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController

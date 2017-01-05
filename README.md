@@ -21,6 +21,6 @@ Requirements
 Legal
 -----
 
-Copyright © 2016 Joschi Kuphal <joschi@kuphal.net> / [@jkphl](https://twitter.com/jkphl)
+Copyright © 2017 Joschi Kuphal <joschi@kuphal.net> / [@jkphl](https://twitter.com/jkphl)
 
 Licensed under the terms of the [GPL v2](LICENSE.txt) license.

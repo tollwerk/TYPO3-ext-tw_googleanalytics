@@ -4,7 +4,7 @@
  * Compatible with ga.js
  *
  * @package		tw_googleanalytics
- * @copyright	Copyright © 2015 tollwerk® GmbH (http://tollwerk.de)
+ * @copyright	Copyright © 2017 tollwerk® GmbH (http://tollwerk.de)
  * @author		Dipl.-Ing. Joschi Kuphal <joschi@tollwerk.de>
  */
 

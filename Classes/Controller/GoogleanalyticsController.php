@@ -27,6 +27,7 @@ namespace Tollwerk\TwGoogleanalytics\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Service\TypoScriptService;
 
@@ -246,6 +247,8 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
             $this->_getPageUrl(array_key_exists('pageUrl', $this->settings) ? $this->settings['pageUrl'] : null));
         $this->view->assign('user', strlen($user) ? $user : null);
         $this->view->assign('settings', $this->settings);
+
+        return preg_replace('/[\R\s]*\R[\R\s]*/', '', $this->view->render());
     }
 
     /************************************************************************************************

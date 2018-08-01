@@ -48,6 +48,9 @@
 			<trans-unit id="common.wpid" xml:space="preserve">
 				<source>Google Analytics &quot;Web Property-ID&quot;:The &quot;Web Property-ID&quot; is issued by Google Analytics and uniquely identifies your website. It should have the format UA-XXXXX-X and can be found in the &quot;Admin &gt; Account Administration&quot; section of your Google Analytics interface</source>
 			</trans-unit>
+			<trans-unit id="common.optoutMessage" xml:space="preserve">
+				<source>Done!</source>
+			</trans-unit>
 			<trans-unit id="common.debug" xml:space="preserve">
 				<source>Debug mode:Enable the debug mode in order to get detailed output to your javascript console (deactivate for production use)</source>
 			</trans-unit>

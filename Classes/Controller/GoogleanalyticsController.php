@@ -105,9 +105,6 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
     public function trackAction()
     {
         $this->settings['features']['anonymizeIP'] = intval((boolean)$this->settings['features']['anonymizeIP']);
-        foreach ($this->settings['features']['track'] as $feature => $enabled) {
-            $this->settings['features']['track'][$feature] = intval((boolean)$enabled);
-        }
 
         // Crossdomain tracking
         $this->settings['crossdomain']['sub'] = intval($this->settings['crossdomain']['sub']);

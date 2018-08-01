@@ -68,6 +68,7 @@ plugin.tx_twgoogleanalytics {
         customDimensions {
 
         }
+
         removeEmptyCustomDimensions = {$plugin.tx_twgoogleanalytics.settings.removeEmptyCustomDimensions}
 
         customMetrics {
@@ -79,40 +80,12 @@ plugin.tx_twgoogleanalytics {
     }
 }
 
-# ACTIVATION VIA TYPOSCRIPT (CONVENTIONAL TRACKING / ga.js)
+# ACTIVATION VIA TYPOSCRIPT
 [globalVar = LIT:1 = {$plugin.tx_twgoogleanalytics.settings.enable}] && [globalVar = TSFE:page|tx_twgoogleanalytics_no_tracking = 0]
     ######################################################################################################
     # PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
     # ----------------------------------------------------------------------------------------------------
-    page.includeJSFooter.googleanalytics = EXT:tw_googleanalytics/Resources/Public/Js/_tw_googleanalytics.min.js
-    page.includeJSFooter.googleanalytics {
-        forceOnTop = 1
-        disableCompression = 1
-    }
-
-    ######################################################################################################
-
-    plugin.tx_twgoogleanalytics {
-        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-        vendorName = Tollwerk
-        extensionName = TwGoogleanalytics
-        pluginName = Googleanalytics
-        controller = Googleanalytics
-        action = track
-        switchableControllerActions {
-            Googleanalytics {
-                1 = track
-            }
-        }
-    }
-[global]
-
-# ACTIVATION VIA TYPOSCRIPT (UNIVERSAL TRACKING / analytics.js)
-[globalVar = LIT:2 = {$plugin.tx_twgoogleanalytics.settings.enable}] && [globalVar = TSFE:page|tx_twgoogleanalytics_no_tracking = 0]
-    ######################################################################################################
-    # PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
-    # ----------------------------------------------------------------------------------------------------
-    page.includeJSFooter.googleanalytics = EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics_universal.min.js
+    page.includeJSFooter.googleanalytics = EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics.min.js
     page.includeJSFooter.googleanalytics {
         forceOnTop = 1
         disableCompression = 1

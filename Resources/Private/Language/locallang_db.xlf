@@ -43,7 +43,7 @@
 				<source>Path to template layouts (FE):You can alter this, though the standard plugin doesn't use layouts ...</source>
 			</trans-unit>
 			<trans-unit id="common.enable" xml:space="preserve">
-				<source>Enable Google Analytics Tracking:This has to be enabled for tracking your website with Google / Universal Analytics</source>
+				<source>Enable Google Analytics Tracking:This has to be enabled for tracking your website with Universal Analytics</source>
 			</trans-unit>
 			<trans-unit id="common.wpid" xml:space="preserve">
 				<source>Google Analytics &quot;Web Property-ID&quot;:The &quot;Web Property-ID&quot; is issued by Google Analytics and uniquely identifies your website. It should have the format UA-XXXXX-X and can be found in the &quot;Admin &gt; Account Administration&quot; section of your Google Analytics interface</source>

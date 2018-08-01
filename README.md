@@ -1,7 +1,7 @@
 TYPO3 extension tw_googleanalytics
 ==================================
 
-Frontend plugin for advanced Google / Universal Analytics integration with a wide range of features including pageView and event tracking, custom variables, cross domain tracking, tracking of file downloads and external domains and much more.
+Frontend plugin for advanced Universal Analytics integration with a wide range of features including pageView and event tracking, custom variables, cross domain tracking, tracking of file downloads and external domains and much more.
 
 
 Documentation

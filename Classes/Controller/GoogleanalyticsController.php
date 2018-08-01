@@ -151,7 +151,7 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
             }
         }
 
-        // Collecting custom dimension & metrics (Universal Analytics only)
+        // Collecting custom dimension & metrics
         $customDimensions =
         $customMetrics = array();
         foreach ((array_key_exists('customDimensions',

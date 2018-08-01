@@ -18,7 +18,7 @@ plugin.tx_twgoogleanalytics {
 		layoutRootPath = EXT:tw_googleanalytics/Resources/Private/Layouts/
 	}
 	settings {
-		# cat=plugin.tx_twgoogleanalytics/common/a; type=options[Off=0,Google Analytics (ga.js)=1,Universal Analytics (analytics.js)=2]; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:common.enable
+		# cat=plugin.tx_twgoogleanalytics/common/a; type=boolean; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:common.enable
 		enable = 0
 		# cat=plugin.tx_twgoogleanalytics/common/b; type=string; label=LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:common.wpid
 		wpid = UA-21447578-2

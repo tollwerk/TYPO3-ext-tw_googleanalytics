@@ -329,39 +329,6 @@ tw_gat.enableAdvertising = function (advertising) {
 };
 
 /**
- * Track client info
- *
- * @param {Boolean} clientInfo          Track client info
- * @return {Object}                     Self reference (liquid interface)
- */
-tw_gat.trackClientInfo = function (clientInfo) {
-    // Currently not available for Universal Analytics
-    return this;
-};
-
-/**
- * Track flash version
- *
- * @param {Boolean} flashVersion        Track flash version
- * @return {Object}                     Self reference (liquid interface)
- */
-tw_gat.trackFlashVersion = function (flashVersion) {
-    // Currently not available for Universal Analytics
-    return this;
-};
-
-/**
- * Track page title
- *
- * @param {Boolean} pageTitle           Track page title
- * @return {Object}                     Self reference (liquid interface)
- */
-tw_gat.trackPageTitle = function (pageTitle) {
-    // Currently not available for Universal Analytics
-    return this;
-};
-
-/**
  * Registering of (top level) domains to be tracked across
  *
  * @param {Array} crossDomains          Domains
@@ -499,28 +466,6 @@ tw_gat.cancel = function (e) {
         e.preventDefault();
     }
     return false;
-};
-
-/**
- * Crossdomain linking to an URL
- *
- * @param {String} url                  URL
- * @return {Object}                     Self reference (liquid interface)
- */
-tw_gat.link = function (url) {
-    // Currently not available for Universal Analytics
-    return this;
-};
-
-/**
- * Crossdomain linking to an URL by POST
- *
- * @param {Element} form                Form element
- * @return {Object}                     Self reference (liquid interface)
- */
-tw_gat.linkByPost = function (form) {
-    // Currently not available for Universal Analytics
-    return this;
 };
 
 /**

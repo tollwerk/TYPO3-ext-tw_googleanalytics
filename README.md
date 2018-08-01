@@ -7,20 +7,18 @@ Frontend plugin for advanced Universal Analytics integration with a wide range o
 Documentation
 -------------
 
-The full online documentation is available in the [TYPO3 Extension Repository](http://docs.typo3.org/typo3cms/extensions/tw_googleanalytics/).
-
-A PDF-version of the documentation is available at the [Tollwerk website](http://tollwerk.de/fileadmin/media/manuals/tw_googleanalytics/manual.pdf).
+We recommend the [PDF documentation](doc/manual.pdf) for full reference.
 
 
 Requirements
 ------------
 
-**ATTENTION**: This is a **TYPO3 CMS 7+** release. Support for TYPO3 4.x has been dropped, use the 1.x versions instead (still available in the [TYPO3 Extension Repository](http://typo3.org/extensions/repository/view/tw_googleanalytics)).
+**ATTENTION**: This is a **TYPO3 CMS 8.7+** release. Support for earlier TYPO3 versions has been dropped.
 
 
 Legal
 -----
 
-Copyright © 2017 Joschi Kuphal <joschi@kuphal.net> / [@jkphl](https://twitter.com/jkphl)
+Copyright © 2018 Joschi Kuphal <joschi@kuphal.net> / [@jkphl](https://twitter.com/jkphl)
 
 Licensed under the terms of the [GPL v2](LICENSE.txt) license.

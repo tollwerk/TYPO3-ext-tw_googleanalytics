@@ -13,11 +13,6 @@ plugin.tx_twgoogleanalytics {
         features {
             advertising = {$plugin.tx_twgoogleanalytics.settings.advertising}
             anonymizeIP = {$plugin.tx_twgoogleanalytics.settings.anonymizeIP}
-            track {
-                title = {$plugin.tx_twgoogleanalytics.settings.track.title}
-                client = {$plugin.tx_twgoogleanalytics.settings.track.client}
-                flash = {$plugin.tx_twgoogleanalytics.settings.track.flash}
-            }
         }
 
         crossdomain {
@@ -45,13 +40,6 @@ plugin.tx_twgoogleanalytics {
             list = {$plugin.tx_twgoogleanalytics.settings.download.list}
         }
 
-        direct {
-            keywords = {$plugin.tx_twgoogleanalytics.settings.direct.keywords}
-            referrers = {$plugin.tx_twgoogleanalytics.settings.direct.referrers}
-        }
-
-        searchengines = {$plugin.tx_twgoogleanalytics.settings.searchengines}
-
         linkid {
             enable = {$plugin.tx_twgoogleanalytics.settings.linkid.enable}
             cookie = {$plugin.tx_twgoogleanalytics.settings.linkid.cookie}
@@ -60,10 +48,6 @@ plugin.tx_twgoogleanalytics {
         }
 
         user =
-
-        customVariables {
-
-        }
 
         customDimensions {
 

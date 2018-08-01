@@ -63,15 +63,6 @@
 			<trans-unit id="features.removeEmptyCustomDimensions" xml:space="preserve">
 				<source>Remove empty custom dimensions</source>
 			</trans-unit>
-			<trans-unit id="features.track.title" xml:space="preserve">
-				<source>Track page title:You might want to disable this feature if you have no specified or very long and cryptic page titles</source>
-			</trans-unit>
-			<trans-unit id="features.track.client" xml:space="preserve">
-				<source>Track client info:Disable this if you do not want to track your visitors' browser types / versions</source>
-			</trans-unit>
-			<trans-unit id="features.track.flash" xml:space="preserve">
-				<source>Track flash version:Disable this if you do not want to track your visitors' flash plugin types / versions</source>
-			</trans-unit>
 			<trans-unit id="crossdomain.domain.sub" xml:space="preserve">
 				<source>Tracking across sub-domains:If you want to enable tracking across multiple sub-domains, set this to &quot;Manual&quot; and enter the main domain name for all the sub-domains you want to track (see next setting &quot;domain.main&quot;). Set this to &quot;None&quot; in order to ensure that the cookies in a given domain are not accessible by any sub-domains</source>
 			</trans-unit>
@@ -110,15 +101,6 @@
 			</trans-unit>
 			<trans-unit id="download.download.list" xml:space="preserve">
 				<source>Download folders &amp; extensions:Enter the folders and file extensions that should be tracked. You may provide a comma separated list of directory-extensions-combinations like this: /path/to/folder=pdf doc zip, /path/to/another/folder=zip rar exe</source>
-			</trans-unit>
-			<trans-unit id="direct.direct.keywords" xml:space="preserve">
-				<source>Direct traffic keywords:Enter a comma separated list of keywords which – if used as search terms by your visitors - should be registered as direct traffic (instead of organic / search engine traffic). It is common to enter one's domain here ...</source>
-			</trans-unit>
-			<trans-unit id="direct.direct.referrers" xml:space="preserve">
-				<source>Direct traffic referrer:Enter a comma separated list of domains which should be treated as direct traffic sources (instead of external referrers). You could e.g. enter secondary domains you use</source>
-			</trans-unit>
-			<trans-unit id="searchengines.searchengines" xml:space="preserve">
-				<source>Search engine traffic sources:Enter a comma separated list of search engine / keyword name definitions that should be considered as search engine traffic sources (e.g. &quot;MySpecialSearchEngine=query, AnotherSE=search&quot;). If you want a search engine to be prepended to the list of known traffic sources, append an exclamation mark to the definition (e.g. &quot;MostImportantSearchEngine=q!&quot;)</source>
 			</trans-unit>
 			<trans-unit id="linkid.enable" xml:space="preserve">
 				<source>Use enhanced link attribution</source>

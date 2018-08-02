@@ -38,9 +38,10 @@ if (version_compare(TYPO3_version, '6.1.0', 'lt')) {
 }
 
 $TCA['pages']['columns']['tx_twgoogleanalytics_no_tracking'] = array(
-    'label' => 'LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:pages.tx_twgoogleanalytics_no_tracking',
-    'config' => Array(
-        'type' => 'check',
+    'label'   => 'LLL:EXT:tw_googleanalytics/Resources/Private/Language/locallang_db.xlf:pages.tx_twgoogleanalytics_no_tracking',
+    'exclude' => true,
+    'config'  => Array(
+        'type'  => 'check',
         'items' => array(
             array('LLL:EXT:cms/locallang_tca.xml:pages.no_search_checkbox_1_formlabel', 1),
         )

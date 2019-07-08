@@ -13,11 +13,6 @@ plugin.tx_twgoogleanalytics {
         features {
             advertising = {$plugin.tx_twgoogleanalytics.settings.advertising}
             anonymizeIP = {$plugin.tx_twgoogleanalytics.settings.anonymizeIP}
-            track {
-                title = {$plugin.tx_twgoogleanalytics.settings.track.title}
-                client = {$plugin.tx_twgoogleanalytics.settings.track.client}
-                flash = {$plugin.tx_twgoogleanalytics.settings.track.flash}
-            }
         }
 
         crossdomain {
@@ -45,13 +40,6 @@ plugin.tx_twgoogleanalytics {
             list = {$plugin.tx_twgoogleanalytics.settings.download.list}
         }
 
-        direct {
-            keywords = {$plugin.tx_twgoogleanalytics.settings.direct.keywords}
-            referrers = {$plugin.tx_twgoogleanalytics.settings.direct.referrers}
-        }
-
-        searchengines = {$plugin.tx_twgoogleanalytics.settings.searchengines}
-
         linkid {
             enable = {$plugin.tx_twgoogleanalytics.settings.linkid.enable}
             cookie = {$plugin.tx_twgoogleanalytics.settings.linkid.cookie}
@@ -61,13 +49,10 @@ plugin.tx_twgoogleanalytics {
 
         user =
 
-        customVariables {
-
-        }
-
         customDimensions {
 
         }
+
         removeEmptyCustomDimensions = {$plugin.tx_twgoogleanalytics.settings.removeEmptyCustomDimensions}
 
         customMetrics {
@@ -79,40 +64,12 @@ plugin.tx_twgoogleanalytics {
     }
 }
 
-# ACTIVATION VIA TYPOSCRIPT (CONVENTIONAL TRACKING / ga.js)
-[globalVar = LIT:1 = {$plugin.tx_twgoogleanalytics.settings.enable}] && [globalVar = TSFE:page|tx_twgoogleanalytics_no_tracking = 0]
+# ACTIVATION VIA TYPOSCRIPT
+[{$plugin.tx_twgoogleanalytics.settings.enable} == 1 && page["tx_twgoogleanalytics_no_tracking"] == 0]
     ######################################################################################################
     # PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
     # ----------------------------------------------------------------------------------------------------
-    page.includeJSFooter.googleanalytics = EXT:tw_googleanalytics/Resources/Public/Js/_tw_googleanalytics.min.js
-    page.includeJSFooter.googleanalytics {
-        forceOnTop = 1
-        disableCompression = 1
-    }
-
-    ######################################################################################################
-
-    plugin.tx_twgoogleanalytics {
-        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-        vendorName = Tollwerk
-        extensionName = TwGoogleanalytics
-        pluginName = Googleanalytics
-        controller = Googleanalytics
-        action = track
-        switchableControllerActions {
-            Googleanalytics {
-                1 = track
-            }
-        }
-    }
-[global]
-
-# ACTIVATION VIA TYPOSCRIPT (UNIVERSAL TRACKING / analytics.js)
-[globalVar = LIT:2 = {$plugin.tx_twgoogleanalytics.settings.enable}] && [globalVar = TSFE:page|tx_twgoogleanalytics_no_tracking = 0]
-    ######################################################################################################
-    # PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
-    # ----------------------------------------------------------------------------------------------------
-    page.includeJSFooter.googleanalytics = EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics_universal.min.js
+    page.includeJSFooter.googleanalytics = EXT:tw_googleanalytics/Resources/Public/Js/tw_googleanalytics.min.js
     page.includeJSFooter.googleanalytics {
         forceOnTop = 1
         disableCompression = 1

@@ -43,11 +43,14 @@
 				<source>Path to template layouts (FE):You can alter this, though the standard plugin doesn't use layouts ...</source>
 			<target state="translated">Pfad zum Layout-Verzeichnis (FE):Mit dieser Einstellung können Sie das Layout-Verzeichnis anpassen, wenngleich auch der Standard-Plugin keine Layouts nutzt ...</target></trans-unit>
 			<trans-unit id="common.enable" xml:space="preserve" approved="yes">
-				<source>Enable Google Analytics Tracking:This has to be enabled for tracking your website with Google / Universal Analytics</source>
-			<target state="translated">Google Analytics-Tracking aktivieren:Aktivieren Sie diese Option, um Ihre Website per Google / Universal Analytics zu erfassen</target></trans-unit>
+				<source>Enable Google Analytics Tracking:This has to be enabled for tracking your website with Universal Analytics</source>
+			<target state="translated">Google Analytics-Tracking aktivieren:Aktivieren Sie diese Option, um Ihre Website per Universal Analytics zu erfassen</target></trans-unit>
 			<trans-unit id="common.wpid" xml:space="preserve" approved="yes">
 				<source>Google Analytics "Web Property-ID":The "Web Property-ID" is issued by Google Analytics and uniquely identifies your website. It should have the format UA-XXXXX-X and can be found in the "Admin &gt; Account Administration" section of your Google Analytics interface</source>
 			<target state="translated">Google Analytics "Web Property-ID":Die "Web Property-ID" wird Ihnen von Google Analytics zugeteilt und identifiziert Ihre Webseite eindeutig. Sie hat das Format UA-XXXXX-X und kann bei Google Analytics im Bereich "Verwaltung &gt; Kontoverwaltung" gefunden werden</target></trans-unit>
+			<trans-unit id="common.optoutMessage" xml:space="preserve">
+				<source>Done!</source>
+			</trans-unit>
 			<trans-unit id="common.debug" xml:space="preserve" approved="yes">
 				<source>Debug mode:Enable the debug mode in order to get detailed output to your javascript console (deactivate for production use)</source>
 			<target state="translated">Debug mode:Aktivieren Sie den Fehlerbehebungsmodus, um ausführliche Ausgaben in Ihrer JavaScript-Konsole zu erhalten (für den Produktivbetrieb bitte unbedingt deaktivieren)</target></trans-unit>

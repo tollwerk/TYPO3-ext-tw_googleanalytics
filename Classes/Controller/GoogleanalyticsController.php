@@ -105,9 +105,6 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
     public function trackAction()
     {
         $this->settings['features']['anonymizeIP'] = intval((boolean)$this->settings['features']['anonymizeIP']);
-        foreach ($this->settings['features']['track'] as $feature => $enabled) {
-            $this->settings['features']['track'][$feature] = intval((boolean)$enabled);
-        }
 
         // Crossdomain tracking
         $this->settings['crossdomain']['sub'] = intval($this->settings['crossdomain']['sub']);
@@ -125,33 +122,7 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
         }
         $this->settings['crossdomain']['cross'] = $this->_getDomains($this->settings['crossdomain']['cross']);
 
-        // Collecting custom variables (Google Analytics only)
-        $customVariables = array();
-        foreach ((array_key_exists('customVariables',
-            $this->settings) ? (array)$this->settings['customVariables'] : array()) as $index => $variableKeyValue) {
-            $index = intval($index);
-            if (($index >= $this->_minIndex) && ($index <= $this->_maxIndex) && is_array($variableKeyValue)) {
-                $customVariable = array('index' => $index, 'name' => null, 'value' => null, 'level' => null);
-                foreach ($variableKeyValue as $key => $value) {
-                    $value = is_array($value) ? $this->_getValue($value) : trim($value);
-                    if (strlen($value)) {
-                        $key = strtolower($key);
-                        if (($key == 'name') || ($key == 'value')) {
-                            $customVariable[$key] = $value;
-                        } elseif (($key == 'level') && array_key_exists($value, self::$_levels)) {
-                            $customVariable['level'] = self::$_levels[$value];
-                        }
-                    }
-                }
-                if (($customVariable['name'] !== null) && ($customVariable['value'] !== null) && ($customVariable['level'] !== null)) {
-                    $customVariable['value'] = substr($customVariable['value'], 0,
-                        63 - strlen($customVariable['name']));
-                    $customVariables[] = array_values($customVariable);
-                }
-            }
-        }
-
-        // Collecting custom dimension & metrics (Universal Analytics only)
+        // Collecting custom dimension & metrics
         $customDimensions =
         $customMetrics = array();
         foreach ((array_key_exists('customDimensions',
@@ -213,26 +184,6 @@ class GoogleanalyticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
         }
         $this->settings['download']['track'] = (strlen($this->settings['download']['prefix']) && count($this->settings['download']['list'])) ? $this->settings['download']['track'] : 0;
         $this->settings['download']['list'] = json_encode($this->settings['download']['list']);
-
-        $this->settings['direct']['keywords'] = json_encode(GeneralUtility::trimExplode(',',
-            implode(',', preg_split("%[\,\;]+%", $this->settings['direct']['keywords'])), true));
-        $this->settings['direct']['referrers'] = json_encode(GeneralUtility::trimExplode(',',
-            implode(',', preg_split("%[\,\;]+%", $this->settings['direct']['referrers'])), true));
-
-        $searchEngines = preg_split("%[\,\;]+%", $this->settings['searchengines']);
-        $this->settings['searchengines'] = array();
-        foreach ($searchEngines as $searchEngine) {
-            if (strlen(trim($searchEngine)) && preg_match("%^([^\=]+)\040*\=([^\!]+)(\!?)$%", trim($searchEngine),
-                    $searchEngineDefinition)
-            ) {
-                $this->settings['searchengines'][] = array(
-                    trim($searchEngineDefinition[1]),
-                    trim($searchEngineDefinition[2]),
-                    !!$searchEngineDefinition[3]
-                );
-            }
-        }
-        $this->settings['searchengines'] = json_encode($this->settings['searchengines']);
 
         $this->settings['linkid']['enable'] = intval($this->settings['linkid']['enable']);
         $this->settings['linkid']['cookie'] = trim($this->settings['linkid']['cookie']);

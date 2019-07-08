@@ -8,16 +8,10 @@
             .enableAdvertising({settings.features.advertising})
             .anonymizeIP({settings.features.anonymizeIP}<f:if condition="{settings.linkid.enable}">)
             .trackLinkid('{settings.linkid.cookie}',{settings.linkid.duration},{settings.linkid.levels}</f:if>)
-            .trackClientInfo({settings.features.track.client})
-            .trackFlashVersion({settings.features.track.flash})
-            .trackPageTitle({settings.features.track.title})
             .trackExternals({settings.external.track},'{settings.external.prefix}',<f:format.raw>{settings.external.restrict}</f:format.raw>)
             .trackEmails({settings.email.track},'{settings.email.prefix}',<f:format.raw>{settings.email.restrict}</f:format.raw>)
             .trackDownloads({settings.download.track},'{settings.download.prefix}','{settings.download.template}',<f:format.raw>{settings.download.list}</f:format.raw>)
-            <f:if condition="{settings.enable} == 2"><f:then>.registerCustomDimensionsMetrics(<f:format.raw>{customDimensionsMetrics}</f:format.raw>)</f:then><f:else>.addDirectKeywords(<f:format.raw>{settings.direct.keywords}</f:format.raw>)
-            .addDirectReferrers(<f:format.raw>{settings.direct.referrers}</f:format.raw>)
-            .addSearchEngines(<f:format.raw>{settings.searchengines}</f:format.raw>)
-            .registerCustomVariables(<f:format.raw>{customVariables}</f:format.raw>)</f:else></f:if>
+            .registerCustomDimensionsMetrics(<f:format.raw>{customDimensionsMetrics}</f:format.raw>)
             .trackPageview("{pageUrl}");
     var ga=document.createElement("script");ga.type="text/javascript",ga.async=!0,ga.src='//<f:if condition="{settings.enable} == 2"><f:then>www.google-analytics.com/analytics.js</f:then><f:else><f:if condition="{settings.features.advertising}"><f:then>stats.g.doubleclick.net/dc.js</f:then><f:else>www.google-analytics.com/ga.js</f:else></f:if></f:else></f:if>',ga.onload=function(){tw_gat.installTrackingHandlers(2)},ga.onreadystatechange=function(){this.readyState in{loaded:1,complete:1}&&tw_gat.installTrackingHandlers(2)};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s);
 })();

@@ -65,7 +65,7 @@ plugin.tx_twgoogleanalytics {
 }
 
 # ACTIVATION VIA TYPOSCRIPT
-[globalVar = LIT:1 = {$plugin.tx_twgoogleanalytics.settings.enable}] && [globalVar = TSFE:page|tx_twgoogleanalytics_no_tracking = 0]
+[{$plugin.tx_twgoogleanalytics.settings.enable} == 1 && page["tx_twgoogleanalytics_no_tracking"] == 0]
     ######################################################################################################
     # PLEASE CHANGE THE OCCURENCES OF "page" IN THE FOLLOWING SECTION TO THE NAME OF YOUR MAIN PAGE OBJECT
     # ----------------------------------------------------------------------------------------------------

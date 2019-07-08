@@ -2,6 +2,7 @@
   "name": "tollwerk/tw-googleanalytics",
   "type": "typo3-cms-extension",
   "description": "Frontend plugin for advanced Universal Analytics integration with a wide range of features including pageView and event tracking, custom variables / metrics, cross domain tracking, tracking of file downloads and external domains and much more.",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Joschi Kuphal",
@@ -19,7 +20,8 @@
   },
   "extra": {
     "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms"
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "extension-key": "tw_googleanalytics"
     }
   },
   "autoload": {

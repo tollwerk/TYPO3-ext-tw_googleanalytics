@@ -2,7 +2,7 @@
  * Universal Analytics Tracker
  *
  * @package       tw_googleanalytics
- * @copyright     Copyright © 2018 tollwerk® GmbH (https://tollwerk.de)
+ * @copyright     Copyright © 2019 tollwerk® GmbH (https://tollwerk.de)
  * @author        Dipl.-Ing. Joschi Kuphal <joschi@tollwerk.de>
  */
 

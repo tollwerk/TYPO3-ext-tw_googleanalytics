@@ -18,5 +18,5 @@ gulp.task('js', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['Resources/Public/Js/*.js', '!Resources/Public/Js/*.min.js'], ['js'])
+    gulp.watch(['Resources/Public/Js/*.js', '!Resources/Public/Js/*.min.js'], gulp.series('js'));
 });

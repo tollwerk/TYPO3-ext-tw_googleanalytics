@@ -30,9 +30,13 @@ if (!defined('TYPO3_MODE')) {
     die ('Access denied.');
 }
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Tollwerk.'.$_EXTKEY,
-    'Googleanalytics',
-    array('Googleanalytics' => 'track'),
-    array('Googleanalytics' => '')
+call_user_func(
+    function() {
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'TwGoogleanalytics',
+            'Googleanalytics',
+            array(\Tollwerk\TwGoogleanalytics\Controller\GoogleanalyticsController::class => 'track'),
+            array(\Tollwerk\TwGoogleanalytics\Controller\GoogleanalyticsController::class => '')
+        );
+    }
 );
